@@ -1,0 +1,201 @@
+/* =Comments
+===================================================== */
+
+// Comments
+//
+// Comments area
+//
+// Markup: comments.html
+//
+// Style guide: 6.comments
+
+.comments-area {
+
+  margin-top: $unit-l;
+
+}
+
+.comments-title {
+
+  @include visually-hidden()
+
+}
+
+/*
+ * Comment listing
+ */
+
+.comment-list {
+
+  @include list-reset();
+  margin-bottom: $unit-m;
+
+  > .comment {
+
+    margin-top: $unit-m;
+
+  }
+
+  .post {}
+
+}
+
+
+/*
+ * Single comment
+ */
+
+article.comment-body {
+
+  position: relative;
+  padding-left: rem(52);
+
+  footer {
+
+  }
+
+}
+
+.comment-author {
+
+  display: block;
+  font-size: ms(-1);
+  line-height: ms(2);
+
+  .avatar {
+
+    position: absolute;
+    // top: rem(4);
+    top: 0;
+    left: 0;
+
+    width: rem(42);
+
+  }
+
+  .fn {
+
+    font-style: normal;
+    font-weight: $bold;
+
+  }
+
+  .says {
+
+    display: none;
+
+  }
+
+}
+
+.comment-metadata {
+
+  // display: inline-block;
+  font-size: ms(-2);
+  line-height: ms(2);
+
+}
+
+.comment-content {
+
+  margin-top: $unit-xs;
+
+  p {
+
+    margin-bottom: $unit-xs;
+
+    font-size: ms(-1);
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+}
+
+.reply {
+
+  margin-top: $unit-xs;
+
+  font-size: ms(-1);
+  line-height: ms(2);
+
+}
+
+
+/*
+ * Other
+ */
+
+.pingback {
+
+  @include visually-hidden();
+
+}
+
+/*
+ * Respond section
+ *
+ * Form fields and checkboxes
+ */
+
+.comment-respond {
+
+  padding: $unit-m;
+
+  border: 1px solid $color-border-normal;
+  border-radius: $border-radius-small;
+
+}
+
+.comment-form {
+
+  label {
+
+    font-size: ms(0);
+    line-height: ms(2);
+
+  }
+
+  p {
+
+    margin-bottom: $unit-s;
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  .comment-subscription-form {
+
+    margin-top: rem(4);
+    margin-bottom: 0;
+
+    label {
+
+      font-size: ms(-1);
+
+    }
+
+  }
+
+}
+
+.comment-reply-title {
+
+  font-size: ms(0);
+  margin-bottom: $unit-s;
+
+}
+
+.comment-notes {
+
+  @include visually-hidden()
+
+}

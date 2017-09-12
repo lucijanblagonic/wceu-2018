@@ -1,0 +1,201 @@
+/* =Tickets
+===================================================== */
+
+// Tickets
+//
+// Table for buying tickets
+//
+// Markup: tickets.html
+//
+// Style guide: 6.tickets
+
+#tix {
+
+  @include clearfix();
+
+  input[type="submit"] {}
+
+}
+
+/*
+ * Tickets table
+ */
+
+.tix_tickets_table {
+
+  border-top: 2px solid $color-border-strong;
+  border-bottom: 2px solid $color-border-strong;
+  margin-bottom: $unit-default;
+
+  thead {
+
+    th {
+
+      color: $color-text;
+
+    }
+
+  }
+
+  tbody {}
+
+  th,
+  td {
+
+    border-color: $color-border-weak;
+
+    &:first-child {
+
+      padding-left: 0;
+
+    }
+
+    &:last-child {
+
+      padding-right: 0;
+
+    }
+
+  }
+
+  .tix-ticket-title {
+
+    display: block;
+    font-size: ms(1);
+    color: $color-text-strong;
+
+    + br {
+
+      display: none;
+
+    }
+
+  }
+
+  .tix-ticket-excerpt {
+
+    display: block;
+    margin-top: rem(4);
+    color: $color-text;
+
+  }
+
+  .tix-column-description {}
+
+  .tix-column-price,
+  .tix-column-remaining,
+  .tix-column-quantity {
+
+    font-weight: $bold;
+
+  }
+
+  .tix-row-coupon {}
+
+}
+
+/*
+ * Coupons
+ */
+
+.tix-coupon-link {}
+
+#tix-coupon-container {
+
+  position: relative;
+  padding-right: rem(160);
+
+  input[type="text"] {
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+  }
+
+  input[type="submit"] {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(160);
+
+    padding: rem(7) rem(10);
+
+    color: $color-text-strong-invert;
+    background-color: $color-button-secondary;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+  }
+
+}
+
+/*
+ * Tickets table on mobile
+ *
+ * Collapse columns to rows
+ */
+
+@include breakpoint(to-medium) {
+
+  .tix_tickets_table {
+
+    thead {
+
+      tr {
+
+        display: none;
+
+      }
+
+    }
+
+    tbody {
+
+      .tix-column-description {
+
+        display: block;
+        width: 100%;
+
+      }
+
+      .tix-column-price,
+      .tix-column-remaining,
+      .tix-column-quantity {
+
+        display: block;
+        float: left;
+
+      }
+
+      .tix-column-price {
+
+        padding-top: rem(16);
+        padding-bottom: rem(16);
+        padding-left: 0;
+        line-height: em(24,16);
+        width: 30%;
+
+      }
+
+      .tix-column-remaining {
+
+        padding-top: rem(16);
+        padding-bottom: rem(16);
+        line-height: em(24,16);
+        width: 30%;
+
+      }
+
+      .tix-column-quantity {
+
+        width: 40%;
+
+      }
+
+    }
+
+  }
+
+}

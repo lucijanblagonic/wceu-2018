@@ -1,0 +1,156 @@
+/* =Social widget
+===================================================== */
+
+// Widget: Social
+//
+// Custom social widget
+//
+// Markup: widget-text-social.html
+//
+// Style guide: 6.widget.text-social
+
+#text-2 {
+
+  &:before {}
+
+}
+
+/*
+ * Social list
+ *
+ * Large social list buttons for Twitter and Facebook
+ */
+
+.list-social {
+
+  @include clearfix();
+  @include list-reset();
+  text-align: center;
+
+  li {
+
+    font-size: ms(0);
+    line-height: ms(1);
+
+    display: block;
+    margin-top: $unit-s;
+
+    text-align: center;
+
+    @include breakpoint(extra-small) {
+
+      width: 46%;
+      display: inline-block;
+
+    }
+
+    @include breakpoint(small) {
+
+      width: 30%;
+      min-width: rem(200);
+
+    }
+
+  }
+
+  strong {
+
+    display: block;
+    color: inherit;
+
+  }
+
+  a {
+
+    position: relative;
+
+    display: block;
+    padding: $unit-s $unit-m;
+    padding-top: rem(68);
+
+
+    color: rgba(0,0,0,.8);
+    border-radius: $border-radius-small;
+    text-decoration: none;
+
+    &:empty {
+
+      display: none;
+
+    }
+
+    &:before {
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%)  rotate(45deg);
+
+      display: block;
+      width: rem(40);
+      height: rem(40);
+      border: 4px solid $color-brand-primary;
+
+      content :"";
+
+      border-radius: $border-radius-small;
+      transition: all .1s ease;
+
+    }
+
+    &:after {
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: rem(48);
+      height: rem(48);
+
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 36px;
+
+      content :"";
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      text-decoration: none;
+      color: $color-text-strong-invert;
+      background-color: $color-brand-primary;
+
+      &:before {
+
+        background-color: tint($color-brand-primary, 60%);
+        border-color: tint($color-brand-primary, 60%);
+
+      }
+
+    }
+
+  }
+
+  .social-twitter a:after {
+
+    background-image: url('https://2017.europe.wordcamp.org/files/2016/11/icon-twitter.png');
+
+  }
+
+  .social-facebook a:after {
+
+    background-image: url('https://2017.europe.wordcamp.org/files/2016/11/icon-facebook.png');
+
+  }
+
+  .social-instagram a:after {
+
+    background-image: url('https://2017.europe.wordcamp.org/files/2017/06/icon-instagram.png');
+
+  }
+
+}

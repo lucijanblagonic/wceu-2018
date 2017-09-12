@@ -1,0 +1,61 @@
+/* =Sessions
+===================================================== */
+
+// Sessions
+//
+// Sessions list
+//
+// Markup: sessions.html
+//
+// Style guide: 6.sessions
+
+.wcorg-sessions {
+
+
+}
+
+.wcorg-session {
+
+  border-top: 1px solid $color-border-weak;
+  padding: $unit-default 0;
+
+  .wcorg-session-description {
+
+    @include clearfix();
+
+  }
+
+  .wcpt-session-meta {
+
+
+  }
+
+  .avatar {
+
+    float: left;
+    margin: $unit-xs $unit-s $unit-xs 0;
+
+  }
+
+  p {
+
+    margin-bottom: $unit-xs;
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  h3 {
+
+    text-transform: none;
+
+  }
+
+  ul {}
+  li {}
+
+}

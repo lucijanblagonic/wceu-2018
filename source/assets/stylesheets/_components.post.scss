@@ -1,0 +1,121 @@
+/* =Post
+===================================================== */
+
+// Post
+//
+// Post entry
+//
+// Markup: post.html
+//
+// Style guide: 6.post
+
+.post {
+
+  @include clearfix();
+
+  margin-bottom: $unit-default;
+  padding-bottom: $unit-default;
+  border-bottom: 6px double $color-border-weak;
+
+}
+
+.entry-header {}
+
+.entry-content {
+
+  @include clearfix();
+
+}
+
+.entry-title {
+
+  font-size: ms(4);
+  line-height: ms(1);
+
+  margin-bottom: $unit-default;
+
+  a {
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      text-decoration: none;
+
+    }
+
+  }
+
+}
+
+.entry-meta {
+
+  margin-bottom: $unit-s;
+
+  a {
+
+    color: $color-link-alt;
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      color: $color-link-alt-hover;
+
+    }
+
+  }
+
+  .updated {
+
+    display: none;
+
+  }
+
+  .published {
+
+    display: inline;
+
+  }
+
+}
+
+.entry-footer {
+
+  margin-bottom: $unit-default;
+
+  @include font-size(16);
+  line-height: em(24,16);
+  color: $color-text-weak;
+
+  > :after {
+
+    content: " | ";
+
+  }
+
+  > :last-child {
+
+    &:after {
+
+      content: "";
+
+    }
+
+  }
+
+  a {
+
+    color: $color-link-alt;
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      color: $color-link-alt-hover;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,405 @@
+/* =Navigation
+===================================================== */
+
+// Navigation
+//
+// Main navigation of the site
+//
+// Markup: navigation.html
+//
+// Style guide: 6.navigation
+
+/*
+ * Menu toggle
+ *
+ * Mobile menu switcher
+ */
+
+.menu-toggle {
+
+  padding: $unit-s $unit-s;
+  margin: 0;
+
+  margin-top: rem(2);
+  width: 100%;
+
+  // font-size: ms(0);
+  font-size: 0; /* Hides the default "Primary menu" label */
+  line-height: 24px;
+
+  font-weight: $bold;
+  text-align: center;
+  letter-spacing: .05em;
+  color: $color-link;
+
+  border-radius: 0;
+  background-color: rgba($color-brand-tertiary, .9);
+
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.focus {
+
+    color: $color-link-hover;
+    background-color: rgba($color-brand-tertiary, .9);
+
+  }
+
+  /* Replaces the "Primary menu" label */
+  &:before {
+
+    display: inline-block;
+
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+
+    content: "Menu";
+
+  }
+
+  &:after {
+
+    position: relative;
+    top: -(rem(2));
+
+    display: inline-block;
+    border: rem(6) solid transparent;
+    margin-left: $unit-xs;
+
+    vertical-align: middle;
+
+    border-top-color: $color-link;
+
+    content: "";
+
+  }
+
+  &[aria-expanded="true"] {
+
+    color: $color-link;
+
+    &:after {
+
+      border-top-color: transparent;
+      border-bottom-color: $color-link;
+
+    }
+
+  }
+
+  @include breakpoint(small) {
+
+    display: none;
+
+  }
+
+}
+
+/*
+ * Main navigation
+ *
+ * Main header navigation
+ * Classes switch via JS on viewport width
+ */
+
+
+// .menu-main-navigation-container {}
+
+.main-navigation {
+
+  position: relative;
+
+  &:before {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: rem(2);
+    background-color: $color-link;
+
+    content: "";
+
+  }
+
+  @include breakpoint(to-small) {
+
+    background-color: $color-brand-tertiary;
+
+
+
+    &.toggled-on .menu {
+
+      display: block;
+
+    }
+
+  }
+
+}
+
+.menu {
+
+  @include list-reset();
+  @include clearfix();
+
+  text-align: center;
+
+  @include breakpoint(small) {
+
+    display: block;
+
+  }
+
+  @include breakpoint(to-small) {
+
+    border-top: 1px solid rgba(255,255,255,.2);
+
+    display: none;
+
+    .toggled-on & {
+
+      display: block;
+
+    }
+
+  }
+
+}
+
+.menu-item {
+
+  position: relative;
+
+  margin: 0;
+  display: block;
+
+  font-family: $font-headline;
+  font-size: ms(0);
+  font-weight: $bold;
+  text-align: left;
+
+  @include breakpoint(small) {
+
+    margin: 0 rem(1);
+    display: inline-block;
+
+    @include font-size(18);
+    line-height: em(24,18);
+    text-align: center;
+
+  }
+
+}
+
+.menu-item a {
+
+  display: block;
+  color: $color-link;
+  padding: $unit-xs $unit-s;
+
+  text-decoration: none;
+  transition: all .1s ease;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.focus {
+
+    color: $color-text-strong;
+    background-color: $color-link-hover;
+
+  }
+
+  @include breakpoint(medium) {
+
+    padding: $unit-s $unit-m;
+
+  }
+
+  @include breakpoint(large) {
+
+    padding: $unit-m $unit-l;
+
+  }
+
+}
+
+.current-menu-item > a {
+
+  color: $color-text-strong;
+  background-color: $color-link;
+
+}
+
+/*
+ * Sub menu
+ */
+
+.menu-item-has-children {
+
+  background-color: rgba($color-brand-tertiary, .6);
+
+  .dropdown-toggle {
+
+    display: none;
+
+  }
+
+  @include breakpoint(small) {
+
+    background-color: transparent;
+
+    > a {
+
+      &:after {
+
+        position: relative;
+        top: -(rem(2));
+
+        display: inline-block;
+        border: rem(6) solid transparent;
+        margin-left: $unit-xs;
+
+        vertical-align: middle;
+
+        border-top-color: $color-link;
+
+        content: "";
+
+      }
+
+    }
+
+    > a .dropdown-toggle {
+
+      display: inline-block;
+
+      display: none; // Hide temporarily
+
+    }
+
+    &:hover > a,
+    &.focus > a {
+
+      color: $color-text-strong;
+      background-color: $color-link;
+
+      &:after {
+
+        border-top-color: $color-text-strong;
+
+      }
+
+    }
+
+    &:hover > .sub-menu,
+    &.focus > .sub-menu {
+
+      left: 0;
+
+    }
+
+    &.current-menu-item > a:after {
+
+      border-top-color: $color-text-strong;
+
+    }
+
+  }
+
+}
+
+.sub-menu {
+
+  @include list-reset();
+
+  .menu-item {
+
+    text-transform: none;
+    font-weight: $regular;
+    font-family: $font-body;
+
+  }
+
+  @include breakpoint(to-small) {
+
+    a {
+
+      padding-left: rem(40);
+
+      background-image: $image-bullet-color;
+      background-repeat: no-repeat;
+      background-size: 12px;
+      background-position: $unit-s 50%;
+
+      &:hover,
+      &:focus,
+      &.focus {
+
+        background-image: $image-bullet-dark;
+
+      }
+
+    }
+
+  }
+
+  @include breakpoint(small) {
+
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: $z-index-navigation-submenu;
+
+    min-width: rem(260);
+
+    background-color: $color-link;
+
+    .menu-item {
+
+      width: 100%;
+      margin: 0;
+      border-top: 1px solid rgba(255,255,255,.2);
+
+      text-align: left;
+
+    }
+
+    a {
+
+      padding: rem(10) $unit-s;
+
+      color: $color-text;
+
+    }
+
+  }
+
+  @include breakpoint(medium) {
+
+    a {
+
+      padding-left: $unit-m;
+      padding-right: $unit-m;
+
+    }
+
+  }
+
+  @include breakpoint(large) {
+
+    a {
+
+      padding-left: $unit-l;
+      padding-right: $unit-l;
+
+    }
+
+  }
+
+}

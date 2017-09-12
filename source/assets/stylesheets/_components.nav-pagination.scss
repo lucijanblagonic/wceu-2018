@@ -1,0 +1,63 @@
+/* =Pagination
+===================================================== */
+
+// Pagination
+//
+// Bottom navigation for previous/next page of listing
+//
+// Markup: post-navigation.html
+//
+// Style guide: 6.pagination
+
+.posts-navigation,
+.post-navigation {
+
+  @include clearfix();
+
+  .screen-reader-text {
+
+    @include visually-hidden();
+
+  }
+
+  a {
+
+    display: block;
+
+  }
+
+  .nav-previous {
+
+    float: left;
+
+    text-align: left;
+
+    a:before {
+
+      margin-right: $unit-xs;
+      display: inline-block;
+
+      content: "\2190";
+
+    }
+
+  }
+
+  .nav-next {
+
+    float: right;
+
+    text-align: right;
+
+    a:after {
+
+      margin-left: $unit-xs;
+      display: inline-block;
+
+      content: "\2192";
+
+    }
+
+  }
+
+}

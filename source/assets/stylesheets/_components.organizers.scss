@@ -1,0 +1,81 @@
+/* =Organizers
+===================================================== */
+
+// Organizers
+//
+// Organizer listing
+//
+// Markup: organizers.html
+//
+// Style guide: 6.organizers
+
+.wcorg-organizers {
+
+  padding-bottom: $unit-default;
+  margin-bottom: $unit-default;
+  border-bottom: 6px double $color-border-weak;
+
+}
+
+.wcorg-organizer {
+
+  max-width: 40em;
+  margin-bottom: $unit-l;
+
+  &:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+  h2 {
+
+    margin-bottom: $unit-s;
+    font-size: ms(1);
+    font-family: $font-headline;
+
+  }
+
+  .wcorg-organizer-description {
+
+    padding-left: rem(64);
+    min-height: rem(48);
+
+    @include breakpoint(small) {
+
+      padding-left: rem(96);
+      min-height: rem(80);
+
+    }
+
+  }
+
+  p {
+
+    margin: 0;
+
+    font-size: ms(0, 16px);
+
+  }
+
+  .avatar {
+
+    float: left;
+    margin-left: -(rem(64));
+    width: rem(48);
+
+    // clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+
+    @include breakpoint(small) {
+
+      margin-left: -(rem(96));
+      width: rem(80);
+
+    }
+
+  }
+
+
+  a {}
+
+}

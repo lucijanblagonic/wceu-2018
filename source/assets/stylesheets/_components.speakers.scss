@@ -1,0 +1,96 @@
+/* =Speakers
+===================================================== */
+
+// Speakers
+//
+// Speakers list
+//
+// Markup: speakers.html
+//
+// Style guide: 6.speakers
+
+.wcorg-speakers {
+
+
+}
+
+.wcorg-speaker {
+
+  border-top: 1px solid $color-border-weak;
+  padding: $unit-default 0;
+
+  .wcorg-speaker-description {
+
+    @include clearfix();
+
+  }
+
+
+  .avatar {
+
+    float: left;
+    margin: $unit-xs $unit-s $unit-xs 0;
+
+  }
+
+  p {
+
+    margin-bottom: $unit-xs;
+
+    font-size: ms(0, 16px);
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+  }
+
+  h3 {
+
+    text-transform: none;
+
+  }
+
+  ul {}
+  li {}
+
+}
+
+/*
+ * Speaker page
+ */
+
+.single-wcb_speaker {
+
+  .entry-content {
+
+    font-size: ms(0, 18px);
+
+  }
+
+}
+
+#session-speaker-names,
+#speaker-session-names {
+
+  @include list-reset();
+
+  margin-bottom: $unit-default;
+
+  li {
+
+    padding-left: rem(32);
+
+    background-image: $image-bullet-dark;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: $unit-xs $unit-xs;
+
+    font-size: ms(0);
+    line-height: ms(2);
+
+  }
+
+}

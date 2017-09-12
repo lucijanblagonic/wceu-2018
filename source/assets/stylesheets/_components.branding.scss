@@ -1,0 +1,101 @@
+/* =Site branding
+===================================================== */
+
+// Site branding
+//
+// Site logo, title and description.
+//
+// Markup: branding.html
+//
+// Style guide: 6.branding
+
+
+/*
+ * Header
+ *
+ * Container for navigation and branding
+ * <header id="masthead" class="site-header" role="banner"> ... </header>
+ */
+
+.site-header {
+
+  background-color: $color-brand-tertiary;
+
+}
+
+.site-header .site-branding {
+
+  position: relative; // Add position: relative to keep the light beams from leaking out
+  overflow: hidden; // Add overflow: hidden to keep light beams from leaking out
+
+  @include container-padding(1.5);
+
+  text-align: center;
+
+  .home & {
+
+    @include container-padding(3.5);
+
+  }
+
+}
+
+.site-title {
+
+  margin: 0;
+
+  font-size: ms(2);
+  line-height: 1;
+  font-family: $font-headline;
+  font-weight: $bold;
+  color: $color-text-strong;
+
+  a {
+
+    display: block;
+    color: $color-link-hover;
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      color: $color-link;
+      text-decoration: none;
+
+    }
+
+  }
+
+  a:before {
+
+    display: block;
+    width: ($site-logo-width * $site-logo-proportion);
+    height: ($site-logo-height * $site-logo-proportion);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $unit-s;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: $site-logo-path;
+    background-size: 100%;
+
+    content: "";
+
+  }
+
+}
+
+.site-description {
+
+  margin: 0;
+  margin-top: $unit-xs;
+
+  font-size: ms(0);
+  line-height: ms(1);
+  font-family: $font-body;
+  font-weight: $regular;
+  text-transform: none;
+  color: $color-text-weak;
+
+}
