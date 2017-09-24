@@ -210,8 +210,8 @@
   &:focus,
   &.focus {
 
-    color: $color-text-strong;
-    background-color: $color-link-hover;
+    color: $color-brand-secondary;
+    background-color: $color-link;
 
   }
 
@@ -231,7 +231,7 @@
 
 .current-menu-item > a {
 
-  color: $color-text-strong;
+  color: $color-brand-secondary;
   background-color: $color-link;
 
 }
@@ -262,12 +262,12 @@
         top: -(rem(2));
 
         display: inline-block;
-        border: rem(6) solid transparent;
+        border: rem(4) solid transparent;
         margin-left: $unit-xs;
 
         vertical-align: middle;
 
-        border-top-color: $color-link;
+        border-top-color: $color-brand-primary;
 
         content: "";
 
@@ -286,12 +286,12 @@
     &:hover > a,
     &.focus > a {
 
-      color: $color-text-strong;
+      color: $color-brand-secondary;
       background-color: $color-link;
 
       &:after {
 
-        border-top-color: $color-text-strong;
+        border-top-color: $color-brand-secondary;
 
       }
 
@@ -374,7 +374,7 @@
 
       padding: rem(10) $unit-s;
 
-      color: $color-text;
+      color: $color-brand-secondary;
 
     }
 
