@@ -13,18 +13,21 @@
 
   position: relative;
 
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: fixed;
-  background-image: $site-hero-path-small;
+  background: $site-hero-background $site-hero-path-pattern repeat 50% 50%;
+  background-size: 300px 300px;
 
-  @include breakpoint(medium) {
+  // background-repeat: no-repeat;
+  // background-position: 50% 0;
+  // background-size: fixed;
+  // background-image: $site-hero-path-small;
 
-    background-image: $site-hero-path-large;
-    background-position: 50% 50%;
-    background-size: cover;
+  // @include breakpoint(medium) {
 
-  }
+  //   background-image: $site-hero-path-large;
+  //   background-position: 50% 50%;
+  //   background-size: cover;
+
+  // }
 
   @include transition-fast();
 
