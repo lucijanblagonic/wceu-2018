@@ -112,25 +112,23 @@
 
   position: relative;
 
-  &:before {
+  // &:before {
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
 
-    height: rem(2);
-    background-color: $color-link;
+  //   height: rem(2);
+  //   background-color: $color-link;
 
-    content: "";
+  //   content: "";
 
-  }
+  // }
 
   @include breakpoint(to-small) {
 
-    background-color: $color-brand-tertiary;
-
-
+    // background-color: $color-brand-tertiary;
 
     &.toggled-on .menu {
 
@@ -243,7 +241,7 @@
 
 .menu-item-has-children {
 
-  background-color: rgba($color-brand-tertiary, .6);
+  // background-color: rgba($color-brand-tertiary, .6);
 
   .dropdown-toggle {
 
@@ -287,12 +285,12 @@
     &:hover > a,
     &.focus > a {
 
-      color: $color-brand-secondary;
+      color: $color-text-strong-invert;
       background-color: $color-link;
 
       &:after {
 
-        border-top-color: $color-brand-secondary;
+        border-top-color: $color-text-strong-invert;
 
       }
 
