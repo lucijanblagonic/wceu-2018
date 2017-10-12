@@ -48,18 +48,19 @@
   line-height: 1;
   font-family: $font-headline;
   font-weight: $bold;
-  color: $color-text-strong;
+  text-transform: uppercase;
+  color: $color-text-strong-invert;
 
   a {
 
     display: block;
-    color: $color-link-hover;
+    color: $color-link-alt;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-link;
+      color: $color-link-alt-hover;
       text-decoration: none;
 
     }
@@ -96,6 +97,6 @@
   font-family: $font-body;
   font-weight: $regular;
   text-transform: none;
-  color: $color-text-weak;
+  color: $color-text-weak-invert;
 
 }

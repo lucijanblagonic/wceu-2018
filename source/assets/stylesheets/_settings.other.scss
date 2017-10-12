@@ -41,14 +41,14 @@ $box-shadow-large:              0 rem(1) rem(24) 0 rgba(0,0,0,.2);
 $site-logo-width:               360px; // Width of the image/element
 $site-logo-height:              360px; // Height of the image/element
 $site-logo-proportion:          .5; // Change the logo proportion in header e.g. .5 will reduce the logo size by half.
-$site-logo-path:                url('https://2018.europe.wordcamp.org/files/2017/09/wceu-18-logo.png'); // Logo image
+$site-logo-path:                url('https://2018.europe.wordcamp.org/files/2017/10/wceu-18-logo.png'); // Logo image
 // $site-logo-path:                url('https://2017.europe.wordcamp.org/files/2016/11/logo-wceu17-dark-icon.png'); // Logo image
 
 /* Hero */
 $site-hero-path-small:          url('https://c2.staticflickr.com/8/7342/27927265956_6755e5913e_b.jpg'); // Background image
 $site-hero-path-large:          url('https://c2.staticflickr.com/8/7342/27927265956_e66b460cbe_o.jpg'); // Background image
-$site-hero-background:          $color-brand-secondary; // Hero color background
-$site-hero-overlay:             .8; // Image overlay color opacity
+$site-hero-background:          $color-brand-quaternary; // Hero color background
+$site-hero-overlay:             .95; // Image overlay color opacity
 
 /* Media queries */
 $extra-small-value:             24em; // 384px

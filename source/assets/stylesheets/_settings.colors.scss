@@ -214,17 +214,17 @@
 
 /* Brand */
 
-$color-brand-primary:             #8200E5; // Violet
-$color-brand-secondary:           #EFDB00; // Safety yellow
-$color-brand-tertiary:            #EF5B00; // Persimmon
-$color-brand-quaternary:          #232020; // Raisin black
-$color-brand-quinary:             #EEE5E9; // Platinum
+$color-brand-primary:             #5566C3; // Blue
+$color-brand-secondary:           #F95758; // Red
+$color-brand-tertiary:            #EFDC39; // Yellow
+$color-brand-quaternary:          #282409; // Black
+// $color-brand-quinary:             #fff; //
 
 @include cc($color-brand-primary, 'color-brand-primary');
 @include cc($color-brand-secondary, 'color-brand-secondary');
 @include cc($color-brand-tertiary, 'color-brand-tertiary');
 @include cc($color-brand-quaternary, 'color-brand-quaternary');
-@include cc($color-brand-quinary, 'color-brand-quinary');
+// @include cc($color-brand-quinary, 'color-brand-quinary');
 
 
 /*
