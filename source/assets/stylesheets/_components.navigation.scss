@@ -30,10 +30,10 @@
   font-weight: $bold;
   text-align: center;
   letter-spacing: .05em;
-  color: $color-link;
+  color: $color-text-strong-invert;
 
   border-radius: 0;
-  background-color: rgba($color-brand-quaternary, .9);
+  background-color: $color-brand-primary;
 
   cursor: pointer;
 
@@ -230,7 +230,7 @@
 
 .current-menu-item > a {
 
-  color: $color-brand-secondary;
+  color: $color-text-strong-invert;
   background-color: $color-link;
 
 }
