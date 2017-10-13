@@ -46,6 +46,20 @@
 
   text-align: left;
 
+  padding-bottom: $container-unit-small * 1.5;
+
+  @include breakpoint(small) {
+
+    padding-bottom: $container-unit-medium * 1.5;
+
+  }
+
+  @include breakpoint(medium) {
+
+    padding-bottom: $container-unit-large * 1.5;
+
+  }
+
 }
 
 
