@@ -331,16 +331,32 @@
 
       padding-left: rem(40);
 
-      background-image: $image-bullet-color;
-      background-repeat: no-repeat;
-      background-size: 12px;
-      background-position: $unit-s 50%;
+      &:before {
+
+        position: absolute;
+        left: $unit-s;
+        top: 50%;
+
+        width: rem(2);
+        height: rem(16);
+        transform: rotate(45deg);
+
+        background-color: $color-text-weak;
+
+        content: "";
+
+      }
+
+      // background-image: $image-bullet-color;
+      // background-repeat: no-repeat;
+      // background-size: 12px;
+      // background-position: $unit-s 50%;
 
       &:hover,
       &:focus,
       &.focus {
 
-        background-image: $image-bullet-dark;
+        // background-image: $image-bullet-dark;
 
       }
 
