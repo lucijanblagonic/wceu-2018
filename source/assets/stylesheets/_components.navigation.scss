@@ -79,12 +79,12 @@
 
   &[aria-expanded="true"] {
 
-    color: $color-link;
+    color: $color-text-strong-invert;
 
     &:after {
 
       border-top-color: transparent;
-      border-bottom-color: $color-link;
+      border-bottom-color: $color-text-strong-invert;
 
     }
 
@@ -334,14 +334,15 @@
       &:before {
 
         position: absolute;
-        left: $unit-s;
+        left: $unit-m;
         top: 50%;
+        margin-top: 0 - rem(8);
 
         width: rem(2);
         height: rem(16);
         transform: rotate(45deg);
 
-        background-color: $color-text-weak;
+        background-color: $color-text-weak-invert;
 
         content: "";
 
