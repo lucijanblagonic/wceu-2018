@@ -15,7 +15,9 @@
 
   &:before {
 
-    background-color: $color-brand-tertiary;
+    background: $color-brand-quaternary $site-hero-path-pattern repeat 50% 50%;
+    background-size: 300px 300px;
+    background-attachment: fixed;
 
   }
 
