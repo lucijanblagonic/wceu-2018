@@ -42,8 +42,8 @@
   &:focus,
   &.focus {
 
-    color: $color-link-hover;
-    background-color: rgba($color-brand-quaternary, .9);
+    color: $color-text-strong-invert;
+    background-color: $color-brand-secondary;
 
   }
 
@@ -71,7 +71,7 @@
 
     vertical-align: middle;
 
-    border-top-color: $color-link;
+    border-top-color: $color-text-strong-invert;
 
     content: "";
 
