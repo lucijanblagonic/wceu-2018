@@ -280,16 +280,16 @@ $color-link-alt-visited:     mix($color-link-alt, #fff, 50%);
  * Shades of grey
  */
 
-$color-grey-10:                   tint($color-brand-tertiary, 90%); // Light
-$color-grey-20:                   tint($color-brand-tertiary, 80%);
-$color-grey-30:                   tint($color-brand-tertiary, 70%);
-$color-grey-40:                   tint($color-brand-tertiary, 60%);
-$color-grey-50:                   tint($color-brand-tertiary, 50%);
-$color-grey-60:                   tint($color-brand-tertiary, 40%);
-$color-grey-70:                   tint($color-brand-tertiary, 30%);
-$color-grey-80:                   tint($color-brand-tertiary, 20%);
-$color-grey-90:                   tint($color-brand-tertiary, 10%);
-$color-grey-100:                  tint($color-brand-tertiary, 0%);  // Dark
+$color-grey-10:                   tint($color-brand-quaternary, 90%); // Light
+$color-grey-20:                   tint($color-brand-quaternary, 80%);
+$color-grey-30:                   tint($color-brand-quaternary, 70%);
+$color-grey-40:                   tint($color-brand-quaternary, 60%);
+$color-grey-50:                   tint($color-brand-quaternary, 50%);
+$color-grey-60:                   tint($color-brand-quaternary, 40%);
+$color-grey-70:                   tint($color-brand-quaternary, 30%);
+$color-grey-80:                   tint($color-brand-quaternary, 20%);
+$color-grey-90:                   tint($color-brand-quaternary, 10%);
+$color-grey-100:                  tint($color-brand-quaternary, 0%);  // Dark
 
 @include cc($color-grey-10, 'color-grey-10');
 @include cc($color-grey-20, 'color-grey-20');

@@ -15,7 +15,7 @@
 
   margin-bottom: $unit-default;
   padding-bottom: $unit-default;
-  border-bottom: 6px double $color-border-weak;
+  border-bottom: rem(1) solid $color-border-weak;
 
 }
 
