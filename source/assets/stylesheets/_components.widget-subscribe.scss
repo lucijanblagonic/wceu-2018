@@ -42,7 +42,7 @@
   input[type="submit"] {
 
     width: 100%;
-    color: $color-text;
+    color: $color-text-strong-invert;
     text-transform: uppercase;
     background-color: $color-button-primary;
 
@@ -50,7 +50,7 @@
     &:focus,
     &:active {
 
-      color: $color-text-strong;
+      color: $color-text-strong-invert;
       background-color: $color-button-primary-hover;
 
     }
