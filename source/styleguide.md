@@ -36,10 +36,3 @@ We are depending on these [coding standards](http://codeguide.co/) for developin
 ## Components
 
 Every component has a static HTML example which helps in keeping the branding consistent.
-
-<div class="message">
-<p class="">
-	<strong>Administrator package: 32000 Euro<br>
-	</strong><strong>Availability:</strong> 6 slots
-</p>
-</div>
