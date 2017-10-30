@@ -155,8 +155,9 @@ article.comment-body {
 
   label {
 
-    font-size: ms(0);
+    font-size: ms(-0);
     line-height: ms(2);
+    text-transform: uppercase;
 
   }
 
@@ -189,8 +190,11 @@ article.comment-body {
 
 .comment-reply-title {
 
-  font-size: ms(0);
   margin-bottom: $unit-s;
+
+  font-size: ms(0);
+  line-height: ms(2);
+  text-transform: uppercase;
 
 }
 
