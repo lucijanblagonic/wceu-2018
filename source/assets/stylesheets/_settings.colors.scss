@@ -251,8 +251,8 @@ $color-text-strong-invert:        rgba(255,255,255,.9);
  */
 
 $color-link:                 $color-brand-primary;
-$color-link-hover:           shade($color-link, 10%);
-$color-link-focus:           shade($color-link, 20%);
+$color-link-hover:           darken($color-link, 20%);
+$color-link-focus:           darken($color-link, 20%);
 $color-link-visited:         tint($color-link, 20%);
 
 @include cc($color-link, 'color-link');

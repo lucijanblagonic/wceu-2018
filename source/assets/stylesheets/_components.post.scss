@@ -25,6 +25,22 @@
 
   @include clearfix();
 
+  a {
+
+    color: $color-link;
+    box-shadow: inset 0 -1px 0 0 rgba($color-link, .5);
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      color: $color-link-hover;
+      box-shadow: inset 0 -2px 0 0 rgba($color-link-hover, .75);
+
+    }
+
+  }
+
 }
 
 .entry-title {
@@ -36,11 +52,15 @@
 
   a {
 
+    color: $color-link;
+    // box-shadow: inset 0 -1px 0 0 rgba($color-link, .25);
+
     &:hover,
     &:focus,
     &:active {
 
-      text-decoration: none;
+      color: $color-link-hover;
+      box-shadow: inset 0 -2px 0 0 rgba($color-link-hover, .75);
 
     }
 
@@ -52,15 +72,24 @@
 
   margin-bottom: $unit-s;
 
+  font-family: $font-headline;
+  font-size: ms(-1);
+  line-height: ms(2);
+  text-transform: uppercase;
+  color: $color-text-weak;
+
   a {
 
-    color: $color-link-alt;
+    color: $color-text;
+    font-weight: $bold;
+    box-shadow: inset 0 -1px 0 0 rgba($color-text, .25);
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-link-alt-hover;
+      color: $color-link-hover;
+      box-shadow: inset 0 -2px 0 0 rgba($color-link-hover, .75);
 
     }
 
@@ -84,8 +113,10 @@
 
   margin-bottom: $unit-default;
 
-  @include font-size(16);
-  line-height: em(24,16);
+  font-family: $font-headline;
+  font-size: ms(-1);
+  line-height: ms(2);
+  text-transform: uppercase;
   color: $color-text-weak;
 
   > :after {
@@ -106,13 +137,16 @@
 
   a {
 
-    color: $color-link-alt;
+    color: $color-text;
+    font-weight: $bold;
+    box-shadow: inset 0 -1px 0 0 rgba($color-text, .25);
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-link-alt-hover;
+      color: $color-link-hover;
+      box-shadow: inset 0 -2px 0 0 rgba($color-link-hover, .75);
 
     }
 

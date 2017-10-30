@@ -32,6 +32,7 @@
  * Hide visually but keep it for screen readers
  */
 
+.screen-reader-text,
 .assistive-text {
 
   @include visually-hidden();
