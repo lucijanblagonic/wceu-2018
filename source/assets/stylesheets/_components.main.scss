@@ -76,11 +76,17 @@
 
   // @include responsive-spacing(1.5);
 
-  padding: $container-unit-small;
+  padding: ($container-unit-small * 1.5) $container-unit-small;
 
   @include breakpoint(medium) {
 
-    padding: $container-unit-medium;
+    padding: ($container-unit-medium * 1.5) $container-unit-medium;
+
+  }
+
+  @include breakpoint(large) {
+
+    padding: ($container-unit-large * 1.5) $container-unit-large;
 
   }
 
@@ -100,11 +106,17 @@
 
   text-align: left;
 
-  margin-top: $container-unit-small * 2;
+  margin-top: $container-unit-small * 1.5;
 
   @include breakpoint(medium) {
 
-    margin-top: $container-unit-medium * 2;
+    margin-top: $container-unit-medium * 1.5;
+
+  }
+
+  @include breakpoint(large) {
+
+    margin-top: $container-unit-large * 1.5;
 
   }
 
@@ -161,13 +173,20 @@
 
 #content-widgets {
 
-  margin-top: 0 - $container-unit-small;
-  margin-bottom: $container-unit-small * 2;
+  margin-top: 0 - ($container-unit-small * 1.5);
+  margin-bottom: $container-unit-small * 1.5;
 
   @include breakpoint(medium) {
 
-    margin-top: 0 - ($container-unit-medium);
-    margin-bottom: $container-unit-medium * 2;
+    margin-top: 0 - ($container-unit-medium * 1.5);
+    margin-bottom: $container-unit-medium * 1.5;
+
+  }
+
+  @include breakpoint(large) {
+
+    margin-top: 0 - ($container-unit-large * 1.5);
+    margin-bottom: $container-unit-large * 1.5;
 
   }
 
