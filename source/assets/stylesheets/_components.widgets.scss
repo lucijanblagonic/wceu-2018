@@ -16,7 +16,7 @@
 
   @include breakpoint(medium) {
 
-    padding: $container-unit-large 0;
+    padding: ($container-unit-medium * 2) 0;
 
   }
 
@@ -69,15 +69,9 @@
 
 #content-widgets {
 
-//   @include responsive-spacing(1.5, 'margin-top', 'negative');
-//   @include responsive-spacing(1.5, 'margin-left', 'negative');
-//   @include responsive-spacing(1.5, 'margin-right', 'negative');
-//   @include responsive-spacing(1.5, 'margin-bottom', 'positive');
-
   .widget {
 
     position: relative;
-    // background-color: #fff;
 
     &:before {
 
@@ -98,11 +92,6 @@
 
 }
 
-// .content-widgets-block {
-
-//
-
-// }
 
 /*
  * Widget text
