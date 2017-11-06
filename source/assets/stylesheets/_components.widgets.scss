@@ -5,14 +5,11 @@
 .widget {
 
   position: relative;
-  // @include container-padding(1.5);
-  // @include responsive-spacing(1.5, 'padding-top', 'positive');
-  // @include responsive-spacing(1.5, 'padding-bottom', 'positive');
   max-width: $container-max-width;
   margin-left: auto;
   margin-right: auto;
 
-  padding: $container-unit-small 0;
+  padding: ($container-unit-small * 2) 0;
 
   @include breakpoint(medium) {
 

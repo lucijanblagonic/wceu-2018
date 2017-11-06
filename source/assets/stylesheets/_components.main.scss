@@ -100,27 +100,13 @@
 
   text-align: left;
 
-  margin-top: $container-unit-small;
+  margin-top: $container-unit-small * 2;
 
   @include breakpoint(medium) {
 
     margin-top: $container-unit-medium * 2;
 
   }
-
-  // margin-top: $container-unit-small * 1.5;
-
-  // @include breakpoint(small) {
-
-  //   margin-top: $container-unit-medium * 1.5;
-
-  // }
-
-  // @include breakpoint(medium) {
-
-  //   margin-top: $container-unit-large * 1.5;
-
-  // }
 
 }
 
@@ -176,7 +162,7 @@
 #content-widgets {
 
   margin-top: 0 - $container-unit-small;
-  margin-bottom: $container-unit-small;
+  margin-bottom: $container-unit-small * 2;
 
   @include breakpoint(medium) {
 
