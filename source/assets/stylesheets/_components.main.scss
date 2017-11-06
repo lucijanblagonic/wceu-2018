@@ -175,12 +175,12 @@
 
 #content-widgets {
 
-  // margin-bottom: $unit-default;
-
+  margin-top: 0 - $container-unit-small;
   margin-bottom: $container-unit-small;
 
   @include breakpoint(medium) {
 
+    margin-top: 0 - ($container-unit-medium);
     margin-bottom: $container-unit-medium * 2;
 
   }
