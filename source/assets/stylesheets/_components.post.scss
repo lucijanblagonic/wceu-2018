@@ -13,9 +13,26 @@
 
   @include clearfix();
 
-  margin-bottom: $unit-default;
-  padding-bottom: $unit-default;
-  border-bottom: rem(1) solid $color-border-weak;
+  margin-bottom: $unit-xl;
+  padding-bottom: $unit-xl;
+  // border-bottom: rem(1) solid $color-border-weak;
+
+  position: relative;
+
+  &:after {
+
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+    transform: translateX(-50%);
+
+    height: rem(2);
+    background-color: $color-grey-10;
+
+  }
 
 }
 
@@ -111,7 +128,8 @@
 
 .entry-footer {
 
-  margin-bottom: $unit-default;
+  // margin-bottom: $unit-default;
+  margin-bottom: 0;
 
   font-family: $font-headline;
   font-size: ms(-1);
