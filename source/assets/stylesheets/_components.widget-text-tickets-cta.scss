@@ -9,10 +9,7 @@
 //
 // Style guide: 6.widget.text-tickets-cta
 
-#text-3,
 #text-4 {
-
-  text-align: center;
 
   &:before {
 
@@ -25,10 +22,16 @@
 
   }
 
+  .widget-title,
+  p {
+
+    text-align: left;
+
+  }
+
   @include breakpoint(medium) {
 
     position: relative;
-    text-align: left;
 
     .widget-title {
 
