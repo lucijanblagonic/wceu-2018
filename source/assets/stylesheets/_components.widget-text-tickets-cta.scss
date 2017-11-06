@@ -16,6 +16,7 @@
 
     // background-image: $image-pattern-01;
     // background-color: $color-brand-quaternary!important;
+    background-color: $color-grey-10;
     background-size: 120px;
     background-attachment: fixed;
     background-position: 50% 0;
@@ -43,7 +44,7 @@
     .realistic-ticket {
 
       position: absolute;
-      top: 0;
+      bottom: 0;
       right: 0;
       margin-top: -20px;
 

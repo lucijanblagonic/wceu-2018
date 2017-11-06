@@ -199,3 +199,44 @@
   }
 
 }
+
+@mixin responsive-spacing($proportion: '1', $type: 'padding', $value: 'negative') {
+
+  // Default type is padding, but it can be replaced with:
+  // margin, margin-X and padding-X.
+
+  #{$type}: $container-unit-small * $proportion;
+
+  @include breakpoint(small) {
+
+    #{$type}: $container-unit-medium * $proportion;
+
+  }
+
+  @include breakpoint(medium) {
+
+    #{$type}: $container-unit-large * $proportion;
+
+  }
+
+  // If the value should be negative, e.g. margin-top -100px;
+
+  @if $value == 'negative' {
+
+    #{$type}: 0 - ($container-unit-small * $proportion);
+
+    @include breakpoint(small) {
+
+      #{$type}: 0 - ($container-unit-medium * $proportion);
+
+    }
+
+    @include breakpoint(medium) {
+
+      #{$type}: 0 - ($container-unit-large * $proportion);
+
+    }
+
+  }
+
+}

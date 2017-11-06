@@ -4,9 +4,11 @@
 
 .widget {
 
-  @include container-padding(1.5);
   position: relative;
+  @include container-padding(1.5);
   max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -52,6 +54,14 @@
     content: "";
 
   }
+
+}
+
+#content-widgets {
+
+  @include responsive-spacing(1.5, 'margin-top', 'negative');
+  @include responsive-spacing(1.5, 'margin-left', 'negative');
+  @include responsive-spacing(1.5, 'margin-right', 'negative');
 
 }
 
