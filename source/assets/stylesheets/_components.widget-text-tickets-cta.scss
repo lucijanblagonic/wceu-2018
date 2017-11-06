@@ -12,6 +12,8 @@
 #text-3,
 #text-4 {
 
+  text-align: center;
+
   &:before {
 
     // background-image: $image-pattern-01;
@@ -26,6 +28,7 @@
   @include breakpoint(medium) {
 
     position: relative;
+    text-align: left;
 
     .widget-title {
 
