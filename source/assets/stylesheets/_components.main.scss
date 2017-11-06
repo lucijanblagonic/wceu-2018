@@ -5,7 +5,7 @@
 //
 // Main section of the site
 //
-// Markup:
+// Markup: main.html
 //
 // Style guide: 6.main
 
@@ -46,19 +46,19 @@
 
   text-align: left;
 
-  padding-bottom: $container-unit-small * 1.5;
+  // padding-bottom: $container-unit-small * 1.5;
 
-  @include breakpoint(small) {
+  // @include breakpoint(small) {
 
-    padding-bottom: $container-unit-medium * 1.5;
+  //   padding-bottom: $container-unit-medium * 1.5;
 
-  }
+  // }
 
-  @include breakpoint(medium) {
+  // @include breakpoint(medium) {
 
-    padding-bottom: $container-unit-large * 1.5;
+  //   padding-bottom: $container-unit-large * 1.5;
 
-  }
+  // }
 
 }
 
@@ -74,7 +74,15 @@
 
   // @include container-padding(1.5);
 
-  @include responsive-spacing(1.5);
+  // @include responsive-spacing(1.5);
+
+  padding: $container-unit-small;
+
+  @include breakpoint(medium) {
+
+    padding: $container-unit-medium;
+
+  }
 
 }
 
@@ -91,6 +99,28 @@
   @include container-center();
 
   text-align: left;
+
+  margin-top: $container-unit-small;
+
+  @include breakpoint(medium) {
+
+    margin-top: $container-unit-medium * 2;
+
+  }
+
+  // margin-top: $container-unit-small * 1.5;
+
+  // @include breakpoint(small) {
+
+  //   margin-top: $container-unit-medium * 1.5;
+
+  // }
+
+  // @include breakpoint(medium) {
+
+  //   margin-top: $container-unit-large * 1.5;
+
+  // }
 
 }
 
@@ -140,5 +170,19 @@
   @include container-center();
 
   text-align: left;
+
+}
+
+#content-widgets {
+
+  // margin-bottom: $unit-default;
+
+  margin-bottom: $container-unit-small;
+
+  @include breakpoint(medium) {
+
+    margin-bottom: $container-unit-medium * 2;
+
+  }
 
 }
