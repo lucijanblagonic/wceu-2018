@@ -65,6 +65,26 @@
 
 }
 
+.content-widgets-block {
+
+  position: relative;
+  background-color: #fff;
+
+  &:before {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1000px;
+    right: -1000px;
+
+    background-color: inherit;
+
+    content: "";
+
+  }
+
+}
 
 /*
  * Widget text
