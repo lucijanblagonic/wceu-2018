@@ -84,106 +84,110 @@
 
 }
 
-.content-widgets-block {
+.page-template-page-day-of {
 
-  position: relative;
-  background-color: #fff;
+  .content-widgets-block {
 
-  &:before {
+    position: relative;
+    background-color: #fff;
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -1000px;
-    right: -1000px;
+    &:before {
 
-    background-color: inherit;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -1000px;
+      right: -1000px;
 
-    content: "";
+      background-color: inherit;
 
-  }
+      content: "";
 
-}
-
-#content-widget-1 {
-
-  &:before {
-
-    background-image: $image-pattern-01;
-    background-color: $color-brand-secondary!important;
-    background-size: 120px;
-    background-attachment: fixed;
-    background-position: 50% 0;
+    }
 
   }
 
-}
+  #content-widget-1 {
 
-#content-widget-2 {
+    &:before {
 
-  &:before {
+      background-image: $image-pattern-01;
+      background-color: $color-brand-secondary!important;
+      background-size: 120px;
+      background-attachment: fixed;
+      background-position: 50% 0;
 
-    border-top: 1px solid $color-border-weak;
-
-    // background-color: $color-grey-20;
-
-  }
-
-}
-
-#content-widget-3 {
-
-  &:before {
-
-    border-top: 1px solid $color-border-weak;
-
-    // background-color: $color-grey-30;
+    }
 
   }
 
-}
+  #content-widget-2 {
 
-#content-widget-4 {
+    &:before {
 
-  &:before {
+      border-top: 1px solid $color-border-weak;
 
-    border-top: 1px solid $color-border-weak;
+      // background-color: $color-grey-20;
 
-    // background-color: $color-grey-30;
-
-  }
-
-}
-
-#content-widget-5 {
-
-  &:before {
-
-    // background-image: $image-pattern-01;
-    background-color: $color-brand-tertiary!important;
-    background-size: 120px;
-    background-attachment: fixed;
-    background-position: 50% 0;
+    }
 
   }
 
-  text-align: center;
+  #content-widget-3 {
 
-  .widget-title {
+    &:before {
 
-    color: $color-text-heading-1;
+      border-top: 1px solid $color-border-weak;
 
-  }
+      // background-color: $color-grey-30;
 
-  p {
-
-    color: $color-text-invert;
+    }
 
   }
 
-  strong {
+  #content-widget-4 {
 
-    color: $color-text-strong-invert;
+    &:before {
+
+      border-top: 1px solid $color-border-weak;
+
+      // background-color: $color-grey-30;
+
+    }
+
+  }
+
+  #content-widget-5 {
+
+    &:before {
+
+      // background-image: $image-pattern-01;
+      background-color: $color-brand-tertiary!important;
+      background-size: 120px;
+      background-attachment: fixed;
+      background-position: 50% 0;
+
+    }
+
+    text-align: center;
+
+    .widget-title {
+
+      color: $color-text-heading-1;
+
+    }
+
+    p {
+
+      color: $color-text-invert;
+
+    }
+
+    strong {
+
+      color: $color-text-strong-invert;
+
+    }
 
   }
 
