@@ -79,8 +79,9 @@ $realistic-ticket-padding-large: 15px;
   font-size: ms(0, 16px);
   line-height: ms(0, 20px);
   font-family: $font-headline;
-  text-transform: uppercase;
   font-weight: $bold;
+  text-align: center;
+  text-transform: uppercase;
 
   /* Misc */
   transform: rotate(-5deg);
