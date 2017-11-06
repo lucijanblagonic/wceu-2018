@@ -5,9 +5,9 @@
 .widget {
 
   position: relative;
-  @include container-padding(1.5);
-  // @include responsive-spacing(1.5, 'padding-top');
-  // @include responsive-spacing(1.5, 'padding-bottom');
+  // @include container-padding(1.5);
+  @include responsive-spacing(1.5, 'padding-top', 'positive');
+  @include responsive-spacing(1.5, 'padding-bottom', 'positive');
   max-width: $container-max-width;
   margin-left: auto;
   margin-right: auto;
@@ -64,6 +64,7 @@
   @include responsive-spacing(1.5, 'margin-top', 'negative');
   @include responsive-spacing(1.5, 'margin-left', 'negative');
   @include responsive-spacing(1.5, 'margin-right', 'negative');
+  @include responsive-spacing(1.5, 'margin-bottom', 'positive');
 
 }
 
