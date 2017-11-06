@@ -84,106 +84,89 @@
 
 }
 
-.content-widgets-block {
+.page-template-page-day-of {
 
-  position: relative;
-  background-color: #fff;
+  #content-widget-1 {
 
-  &:before {
+    &:before {
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -1000px;
-    right: -1000px;
+      background-image: $image-pattern-01;
+      background-color: $color-brand-secondary!important;
+      background-size: 120px;
+      background-attachment: fixed;
+      background-position: 50% 0;
 
-    background-color: inherit;
-
-    content: "";
+    }
 
   }
 
-}
+  #content-widget-2 {
 
-#content-widget-1 {
+    &:before {
 
-  &:before {
+      border-top: 1px solid $color-border-weak;
 
-    background-image: $image-pattern-01;
-    background-color: $color-brand-secondary!important;
-    background-size: 120px;
-    background-attachment: fixed;
-    background-position: 50% 0;
+      // background-color: $color-grey-20;
+
+    }
 
   }
 
-}
+  #content-widget-3 {
 
-#content-widget-2 {
+    &:before {
 
-  &:before {
+      border-top: 1px solid $color-border-weak;
 
-    border-top: 1px solid $color-border-weak;
+      // background-color: $color-grey-30;
 
-    // background-color: $color-grey-20;
-
-  }
-
-}
-
-#content-widget-3 {
-
-  &:before {
-
-    border-top: 1px solid $color-border-weak;
-
-    // background-color: $color-grey-30;
+    }
 
   }
 
-}
+  #content-widget-4 {
 
-#content-widget-4 {
+    &:before {
 
-  &:before {
+      border-top: 1px solid $color-border-weak;
 
-    border-top: 1px solid $color-border-weak;
+      // background-color: $color-grey-30;
 
-    // background-color: $color-grey-30;
-
-  }
-
-}
-
-#content-widget-5 {
-
-  &:before {
-
-    // background-image: $image-pattern-01;
-    background-color: $color-brand-tertiary!important;
-    background-size: 120px;
-    background-attachment: fixed;
-    background-position: 50% 0;
+    }
 
   }
 
-  text-align: center;
+  #content-widget-5 {
 
-  .widget-title {
+    &:before {
 
-    color: $color-text-heading-1;
+      // background-image: $image-pattern-01;
+      background-color: $color-brand-tertiary!important;
+      background-size: 120px;
+      background-attachment: fixed;
+      background-position: 50% 0;
 
-  }
+    }
 
-  p {
+    text-align: center;
 
-    color: $color-text-invert;
+    .widget-title {
 
-  }
+      color: $color-text-heading-1;
 
-  strong {
+    }
 
-    color: $color-text-strong-invert;
+    p {
+
+      color: $color-text-invert;
+
+    }
+
+    strong {
+
+      color: $color-text-strong-invert;
+
+    }
 
   }
 
