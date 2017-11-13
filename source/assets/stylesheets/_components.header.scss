@@ -26,7 +26,12 @@
 
     background-image: $site-hero-path-large;
     background-position: 50% 100%;
-    background-size: cover;
+
+  }
+
+  @media (min-width: 1800px) {
+
+    background-image: $site-hero-path-large;
 
   }
 
