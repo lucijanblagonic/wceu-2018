@@ -1,6 +1,69 @@
+// Widgets
+//
+// Showing all available widget areas on the page
+//
+// Markup: styleguide-widgets.html
+//
+// Style guide: 6.widget-areas
+
 /*
- * Widgets
+ * Style guide widget areas
+ *
+ * Override styling to showcase visually theme layout and widget areas.
+ * This part is scoped to affect only the style guide.
  */
+
+.styleguide-widget-areas {
+
+  * {
+
+    margin: 0!important;
+    padding: 1em!important;
+
+    background: rgba($color-brand-primary, .1);
+    border: rem(2) solid rgba($color-brand-primary, .5);
+
+    font-size: ms(0,18px);
+    line-height: ms(0, 24px);
+
+    &:before {
+
+      position: static!important;
+      top: auto!important;
+      left: auto!important;
+      right: auto!important;
+      bottom: auto!important;
+      display: inline-block;
+      padding: .125em .25em;
+
+      content: "#"attr(id);
+
+      font-size: ms(0,14px);
+      line-height: ms(0, 18px);
+      font-weight: $bold;
+      font-family: $monospace;
+
+      background-color: #fff;
+
+    }
+
+  }
+
+  * + * {
+
+    margin-top: 1em!important;
+
+  }
+
+}
+
+/*
+ * Widget layouts and styling
+ *
+ * Basic widget structure and styling applied based
+ * on the position of the widget.
+ */
+
 
 .widget {
 
