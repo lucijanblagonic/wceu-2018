@@ -19,11 +19,12 @@
 
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-size: cover;
   background-image: $site-hero-path-small;
+  background-color: $site-hero-background;
 
   @include breakpoint(medium) {
 
+    background-size: cover;
     background-image: $site-hero-path-large;
     background-position: 50% 100%;
 

@@ -128,7 +128,7 @@
 
   @include breakpoint(to-small) {
 
-    // background-color: $color-brand-tertiary;
+    background-color: $color-brand-quaternary;
 
     &.toggled-on .menu {
 
