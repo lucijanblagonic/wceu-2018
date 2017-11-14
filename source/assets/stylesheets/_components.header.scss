@@ -13,22 +13,28 @@
 
   position: relative;
 
-  background: $site-hero-background $site-hero-path-pattern repeat 50% 50%;
-  background-size: 300px 300px;
-  background-attachment: fixed;
+  // background: $site-hero-background $site-hero-path-pattern repeat 50% 50%;
+  // background-size: 300px 300px;
+  // background-attachment: fixed;
 
-  // background-repeat: no-repeat;
-  // background-position: 50% 0;
-  // background-size: fixed;
-  // background-image: $site-hero-path-small;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: $site-hero-path-small;
+  background-color: $site-hero-background;
 
-  // @include breakpoint(medium) {
+  @include breakpoint(medium) {
 
-  //   background-image: $site-hero-path-large;
-  //   background-position: 50% 50%;
-  //   background-size: cover;
+    background-size: cover;
+    background-image: $site-hero-path-large;
+    background-position: 50% 100%;
 
-  // }
+  }
+
+  @media (min-width: 1800px) {
+
+    background-image: $site-hero-path-wide;
+
+  }
 
   @include transition-fast();
 
