@@ -18,12 +18,12 @@ h2,
 h3,
 h4 {
 
-  margin-bottom: $unit-default;
-  margin-top: $unit-l;
+  margin-top: $unit-xl;
+  margin-bottom: $unit-xs;
 
   font-family: $font-headline;
   font-weight: $bold;
-  line-height: 1;
+  line-height: ms(1);
 
   &:first-child {
 
