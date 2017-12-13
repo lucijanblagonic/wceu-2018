@@ -36,7 +36,7 @@ h4 {
 h1 {
 
   font-size: ms(4);
-  color: $color-text-heading-1;
+  color: $color-text-strong;
   letter-spacing: -.05em;
 
 }
@@ -44,7 +44,7 @@ h1 {
 h2 {
 
   font-size: ms(3);
-  color: $color-text-heading-2;
+  color: $color-text-strong;
   letter-spacing: -.05em;
 
 }
@@ -52,14 +52,20 @@ h2 {
 h3 {
 
   font-size: ms(2);
-  color: $color-text-heading-3;
+  color: $color-text;
+
+  text-transform: uppercase;
+  letter-spacing: .05em;
 
 }
 
 h4 {
 
   font-size: ms(1);
-  color: $color-text-heading-4;
+  color: $color-text;
+
+  text-transform: uppercase;
+  letter-spacing: .05em;
 
 
 }
