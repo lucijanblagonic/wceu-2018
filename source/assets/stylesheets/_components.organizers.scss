@@ -11,9 +11,10 @@
 
 .wcorg-organizers {
 
-  padding-bottom: $unit-default;
+  padding-bottom: $unit-xxl;
   margin-bottom: $unit-default;
-  border-bottom: 6px double $color-border-weak;
+  // border-bottom: 6px double $color-border-weak;
+  background: $image-divider no-repeat 50% calc(100% + 22px); // Compensate for the image height
 
 }
 
