@@ -110,15 +110,33 @@
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-6.html#kssref-6-helpers-highlight">
+              <a href="section-6.html#kssref-6-helpers">
+                <span class="kss-nav__ref ">6.8</span
+                ><span class="kss-nav__name">Helpers</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-6.html#kssref-6-helpers-grid">
                 <span class="kss-nav__ref kss-nav__ref-child">6.8.1</span
+                ><span class="kss-nav__name">Grid</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-6.html#kssref-6-helpers-highlight">
+                <span class="kss-nav__ref kss-nav__ref-child">6.8.2</span
                 ><span class="kss-nav__name">Highlight</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-6.html#kssref-6-helpers-note">
-                <span class="kss-nav__ref kss-nav__ref-child">6.8.2</span
+                <span class="kss-nav__ref kss-nav__ref-child">6.8.3</span
                 ><span class="kss-nav__name">Note</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-6.html#kssref-6-helpers-outline">
+                <span class="kss-nav__ref kss-nav__ref-child">6.8.4</span
+                ><span class="kss-nav__name">Outline</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -1077,13 +1095,99 @@
       </div>
 
       </section>
+      <section id="kssref-6-helpers" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-6-helpers">
+          <span class="kss-title__ref">
+              6.8
+            <span class="kss-title__permalink-hash">
+                #6.helpers
+            </span>
+          </span>
+          Helpers
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Styles that can be used in the WordPress editor</p>
+
+      </div>
+    </div>
+
+
+      </section>
+      <section id="kssref-6-helpers-grid" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-6-helpers-grid">
+          <span class="kss-title__ref">
+              6.8.1
+            <span class="kss-title__permalink-hash">
+                #6.helpers.grid
+            </span>
+          </span>
+          Grid
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>Converts children to a grid layout. Use modifiers <code>grid-two</code>, <code>grid-three</code> or <code>grid-four</code> to create a column layout.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="grid grid-three">
+  <div class="outline">
+    <h3>Hello world</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+  </div>
+  <div class="note">
+    <h3>Hello world</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+  </div>
+  <div class="highlight">
+    <h3>Hello world</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;grid grid-three&quot;&gt;
+  &lt;div class=&quot;outline&quot;&gt;
+    &lt;h3&gt;Hello world&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;note&quot;&gt;
+    &lt;h3&gt;Hello world&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;highlight&quot;&gt;
+    &lt;h3&gt;Hello world&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
       <section id="kssref-6-helpers-highlight" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-6-helpers-highlight">
           <span class="kss-title__ref">
-              6.8.1
+              6.8.2
             <span class="kss-title__permalink-hash">
                 #6.helpers.highlight
             </span>
@@ -1094,7 +1198,7 @@
 
 
       <div class="kss-description">
-        <p>Outlined block of content</p>
+        <p>Block of content with background color</p>
 
       </div>
     </div>
@@ -1123,7 +1227,7 @@
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-6-helpers-note">
           <span class="kss-title__ref">
-              6.8.2
+              6.8.3
             <span class="kss-title__permalink-hash">
                 #6.helpers.note
             </span>
@@ -1134,7 +1238,7 @@
 
 
       <div class="kss-description">
-        <p>Outlined block of content that serves as an advice</p>
+        <p>Block of content with background color</p>
 
       </div>
     </div>
@@ -1152,6 +1256,48 @@
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi, aspernatur animi optio dicta ullam hic, nisi, assumenda facere tenetur explicabo architecto repellendus, minima. Aut, eligendi.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-6-helpers-outline" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-6-helpers-outline">
+          <span class="kss-title__ref">
+              6.8.4
+            <span class="kss-title__permalink-hash">
+                #6.helpers.outline
+            </span>
+          </span>
+          Outline
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>Block of content with border</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="outline">
+  <h3>Hello world</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi, aspernatur animi optio dicta ullam hic, nisi, assumenda facere tenetur explicabo architecto repellendus, minima. Aut, eligendi.</p>
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint lang-html"><code data-language="html">&lt;div class=&quot;outline&quot;&gt;
+  &lt;h3&gt;Hello world&lt;/h3&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi, aspernatur animi optio dicta ullam hic, nisi, assumenda facere tenetur explicabo architecto repellendus, minima. Aut, eligendi.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
       </div>
