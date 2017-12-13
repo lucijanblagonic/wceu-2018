@@ -57,3 +57,58 @@
   }
 
 }
+
+// Heading
+//
+// Link inside a heading that anchors the user to top of the page
+//
+// Markup:
+// <h2 class="heading-top" id="main">Heading <a href="#main">Return to top</a></h2>
+//
+// Style guide: 6.headings.return-top
+
+.heading-top {
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  // padding-right: rem(64);
+
+  a {
+
+    display: block;
+    margin-left: auto;
+
+    @include font-size(16);
+    line-height: em(24,16);
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-family: $font-body;
+
+    &:after {
+
+      position: relative;
+      top: 0 - rem(1);
+
+      display: inline-block;
+      margin-left: $unit-xs;
+
+      content: "\2191";
+
+    }
+
+    @include breakpoint(large) {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      padding-left: $unit-m;
+
+    }
+
+  }
+
+}
