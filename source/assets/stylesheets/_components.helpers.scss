@@ -195,6 +195,16 @@
     text-transform: uppercase;
     font-family: $font-body;
 
+    white-space: nowrap;
+
+    &:before {
+
+      display: inline-block;
+      width: $unit-m;
+      content: "";
+
+    }
+
     &:after {
 
       position: relative;
