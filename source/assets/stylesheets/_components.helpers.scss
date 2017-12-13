@@ -197,13 +197,13 @@
 
     white-space: nowrap;
 
-    &:before {
+    // &:before {
 
-      display: inline-block;
-      width: $unit-m;
-      content: "";
+    //   display: inline-block;
+    //   width: $unit-m;
+    //   content: "";
 
-    }
+    // }
 
     &:after {
 
