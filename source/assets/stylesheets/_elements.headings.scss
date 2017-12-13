@@ -24,7 +24,6 @@ h4 {
   font-family: $font-headline;
   font-weight: $bold;
   line-height: 1;
-  letter-spacing: -.025em;
 
   &:first-child {
 
@@ -46,6 +45,7 @@ h2 {
 
   font-size: ms(3);
   color: $color-text-heading-2;
+  letter-spacing: -.05em;
 
 }
 
