@@ -4,9 +4,15 @@
  * Highlight a block of text
  */
 
+// Helpers
+//
+// Styles that can be used in the WordPress editor
+//
+// Style guide: 6.helpers
+
 // Highlight
 //
-// Outlined block of content
+// Block of content with background color
 //
 // Markup:
 // <div class="highlight">
@@ -19,6 +25,7 @@
 
   padding: $unit-m;
   margin-bottom: $unit-default;
+  border: rem(1) solid transparent;
 
   background-color: $color-grey-10;
   border-radius: $border-radius-small;
@@ -33,7 +40,7 @@
 
 // Note
 //
-// Outlined block of content that serves as an advice
+// Block of content with background color
 //
 // Markup:
 // <div class="note">
@@ -46,6 +53,7 @@
 
   padding: $unit-m;
   margin-bottom: $unit-default;
+  border: rem(1) solid transparent;
 
   background-color: $color-brand-tertiary;
   border-radius: $border-radius-small;
@@ -53,6 +61,106 @@
   p:last-child {
 
     margin-bottom: 0;
+
+  }
+
+}
+
+// Outline
+//
+// Block of content with border
+//
+// Markup:
+// <div class="outline">
+//   <h3>Hello world</h3>
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi, aspernatur animi optio dicta ullam hic, nisi, assumenda facere tenetur explicabo architecto repellendus, minima. Aut, eligendi.</p>
+// </div>
+//
+// Style guide: 6.helpers.outline
+
+.outline {
+
+  padding: $unit-m;
+  margin-bottom: $unit-default;
+  border: rem(1) solid $color-border-weak;
+
+  border-radius: $border-radius-small;
+
+  p:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+}
+
+// Grid
+//
+// Converts children to a grid layout. Use modifiers `grid-two`, `grid-three` or `grid-four` to create a column layout.
+//
+// Markup:
+// <div class="grid grid-three">
+//   <div class="outline">
+//     <h3>Hello world</h3>
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+//   </div>
+//   <div class="note">
+//     <h3>Hello world</h3>
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+//   </div>
+//   <div class="highlight">
+//     <h3>Hello world</h3>
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+//   </div>
+// </div>
+//
+// Style guide: 6.helpers.grid
+
+.grid {
+
+  display: grid;
+  grid-column-gap: $unit-m;
+  grid-row-gap: $unit-m;
+
+}
+
+.grid-two {
+
+  @include breakpoint(medium) {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+}
+
+.grid-three {
+
+  @include breakpoint(medium) {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  @include breakpoint(large) {
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
+}
+
+.grid-four {
+
+  @include breakpoint(medium) {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  @include breakpoint(large) {
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
   }
 
