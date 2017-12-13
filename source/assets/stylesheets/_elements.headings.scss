@@ -51,11 +51,9 @@ h2 {
 
 h3 {
 
-  font-size: ms(0);
-  color: $color-text;
-
-  text-transform: uppercase;
-  letter-spacing: 0;
+  font-size: ms(1);
+  color: $color-text-strong;
+  letter-spacing: -.025em;
 
 }
 
@@ -63,9 +61,7 @@ h4 {
 
   font-size: ms(0);
   color: $color-text-weak;
-
   text-transform: uppercase;
   letter-spacing: 0;
-
 
 }
