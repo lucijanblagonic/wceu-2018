@@ -1,3 +1,12 @@
+// Images
+//
+// Image examples
+//
+// Markup:
+// <img class="size-full" src="http://lorempixel.com/800/200/people/1/" />
+//
+// Style guide: 6.images
+
 /*
  * Images
  */
@@ -75,6 +84,13 @@
 }
 
 .size-full {
+
+  margin-top: $unit-l;
+  margin-bottom: $unit-l;
+
+  // box-shadow: .25em .25em 0 0 rgba($color-brand-primary, 8),
+  //             -.25em .5em 0 0 rgba($color-brand-secondary, 8),
+  //             0 .75em 0 0 rgba($color-brand-tertiary, .8);
 
   .entry-content & {
 
