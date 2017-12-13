@@ -1,0 +1,59 @@
+/*
+ * Highlight
+ *
+ * Highlight a block of text
+ */
+
+// Highlight
+//
+// Outlined block of content
+//
+// Markup:
+// <div class="highlight">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi, aspernatur animi optio dicta ullam hic, nisi, assumenda facere tenetur explicabo architecto repellendus, minima. Aut, eligendi.</p>
+// </div>
+//
+// Style guide: 6.helpers.highlight
+
+.highlight {
+
+  padding: $unit-m;
+  margin-bottom: $unit-default;
+
+  background-color: $color-grey-10;
+  border-radius: $border-radius-small;
+
+  p:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+}
+
+// Note
+//
+// Outlined block of content that serves as an advice
+//
+// Markup:
+// <div class="note">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi, aspernatur animi optio dicta ullam hic, nisi, assumenda facere tenetur explicabo architecto repellendus, minima. Aut, eligendi.</p>
+// </div>
+//
+// Style guide: 6.helpers.note
+
+.note {
+
+  padding: $unit-m;
+  margin-bottom: $unit-default;
+
+  background-color: $color-brand-tertiary;
+  border-radius: $border-radius-small;
+
+  p:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+}
