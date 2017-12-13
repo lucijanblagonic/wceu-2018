@@ -12,9 +12,25 @@
 
 hr {
 
-  margin: $unit-default 0;
+  margin: $unit-l 0;
   padding: 0;
   border: 0;
-  border-top: 1px solid $color-grey-10;
+  height: rem(24);
+
+  background: $image-divider no-repeat 50% 50%;
+
+  @include breakpoint(medium) {
+
+    margin-top: $unit-xl;
+    margin-bottom: $unit-xl;
+
+  }
+
+  @include breakpoint(large) {
+
+    margin-top: $unit-xxl;
+    margin-bottom: $unit-xxl;
+
+  }
 
 }

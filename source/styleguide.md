@@ -29,6 +29,10 @@ WordCamp header. Read more about [colors](section-1.html#kssref-1-colors) and [f
   <!-- #site-navigation -->
 </header><!-- #masthead -->
 
+## Widgets
+
+All widget areas on the webpage [presented visually](section-6.html#kssref-6-widget-areas).
+
 ## Code standards
 
 We are depending on these [coding standards](http://codeguide.co/) for developing flexible, durable, and sustainable HTML and CSS. This mostly affects CSS since HTML of the theme can't be changed without making global breaking changes. But by keeping CSS organized and following a specific writing style — we are making sure that code remains readable and maintainable.
