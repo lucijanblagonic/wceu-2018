@@ -1,0 +1,110 @@
+/* =Accordions
+===================================================== */
+
+// Accordions
+//
+// List of accordions (used e.g. for volunteer roles) built with the use of checkboxes to help with accessibility.
+//
+// Markup: accordions.html
+//
+// Style guide: 6.accordions
+
+.accordion {
+
+  position: relative;
+
+  margin: $unit-xs 0;
+  border: rem(1) solid $color-border-weak;
+  border-radius: $border-radius-small;
+
+  input[type=checkbox],
+  input[type=radio] {
+
+    position: absolute;
+    opacity: 0;
+
+
+  }
+
+  input[type=checkbox] + label,
+  input[type=radio] + label {
+
+    position: relative;
+    display: block;
+
+    padding: $unit-xs $unit-m;
+
+    font-size: ms(0);
+    line-height: ms(2);
+    font-weight: $bold;
+    border-radius: $border-radius-small;
+
+    cursor: pointer;
+
+    &:before {
+
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: $unit-m;
+      transform: translateY(-50%);
+
+      border: rem(6) solid transparent;
+      border-top-color: $color-border-strong;
+      @include transition-fast();
+
+    }
+
+    &:hover {
+
+      color: $color-link;
+
+    }
+
+  }
+
+  input[type=checkbox]:focus + label,
+  input[type=radio]:focus + label {
+
+    color: $color-link;
+    box-shadow: 0 0 0 .125em $color-input-focus;
+
+  }
+
+  input[type=checkbox]:checked + label,
+  input[type=radio]:checked + label {
+
+    color: $color-link;
+    background-color: $color-grey-10;
+    border-radius: $border-radius-small $border-radius-small 0 0;
+
+    &:before {
+
+      border-top-color: $color-link;
+      transform: translateY(-50%) rotate(180deg);
+
+    }
+
+  }
+
+  input[type=checkbox] + label + .accordion-content,
+  input[type=radio] + label + .accordion-content {
+
+    display: none;
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+
+  }
+
+  input[type=checkbox]:checked + label + .accordion-content,
+  input[type=radio]:checked + label + .accordion-content {
+
+    display: block;
+    height: auto;
+    max-height: 2000px;
+
+  }
+
+}
