@@ -7,9 +7,6 @@
 //
 // :hover - Hover state
 // :focus - Focus state
-// .button--primary   - Primary button example
-// .button--primary:hover   - Primary button hover example
-// .button--primary:focus   - Primary button focus example
 // .button--secondary - Secondary button example
 // .button--secondary:hover - Secondary button hover example
 // .button--secondary:focus - Secondary button focus example
@@ -40,15 +37,16 @@
   font-size: ms(0);
   line-height: ms(2);
   text-align: center;
-  color: $color-text;
+  color: $color-text-invert;
   font-family: $font-brand-primary;
   font-weight: $bold;
   text-decoration: none;
 
   /* Visual */
-  background-color: $color-button-regular;
+  background-color: $color-button-primary;
   border-radius: $border-radius-small;
   border-color: transparent;
+  box-shadow: none;
 
   /* Misc */
   cursor: pointer;
@@ -58,8 +56,8 @@
   &:focus,
   &:active {
 
-    color: $color-text-strong;
-    background-color: $color-button-regular-hover;
+    color: $color-text-strong-invert;
+    background-color: $color-button-primary-hover;
     text-decoration: none;
 
   }
@@ -71,21 +69,21 @@
 
   }
 
-  &.button--primary {
+  // &.button--primary {
 
-    color: $color-text-invert;
-    background-color: $color-button-primary;
+  //   color: $color-text-invert;
+  //   background-color: $color-button-primary;
 
-    &:hover,
-    &:focus,
-    &:active {
+  //   &:hover,
+  //   &:focus,
+  //   &:active {
 
-      color: $color-text-strong-invert;
-      background-color: $color-button-primary-hover;
+  //     color: $color-text-strong-invert;
+  //     background-color: $color-button-primary-hover;
 
-    }
+  //   }
 
-  }
+  // }
 
   &.button--secondary {
 
