@@ -37,8 +37,8 @@
   font-size: ms(0);
   line-height: ms(2);
   text-align: center;
-  color: $color-text-invert;
-  font-family: $font-brand-primary;
+  color: $color-text-invert!important;
+  font-family: $font-brand-primary!important;
   font-weight: $bold;
   text-decoration: none;
 
@@ -46,7 +46,7 @@
   background-color: $color-button-primary;
   border-radius: $border-radius-small;
   border-color: transparent;
-  box-shadow: none;
+  box-shadow: none!important;
 
   /* Misc */
   cursor: pointer;
@@ -56,8 +56,8 @@
   &:focus,
   &:active {
 
-    color: $color-text-strong-invert;
-    background-color: $color-button-primary-hover;
+    color: $color-text-strong-invert!important;
+    background-color: $color-button-primary-hover!important;
     text-decoration: none;
 
   }
@@ -87,15 +87,15 @@
 
   &.button--secondary {
 
-    color: $color-text-invert;
-    background-color: $color-button-secondary;
+    color: $color-text-invert!important;
+    background-color: $color-button-secondary!important;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-text-strong-invert;
-      background-color: $color-button-secondary-hover;
+      color: $color-text-strong-invert!important;
+      background-color: $color-button-secondary-hover!important;
 
     }
 
@@ -103,15 +103,15 @@
 
   &.button--invert {
 
-    color: $color-text;
-    background-color: $color-button-invert;
+    color: $color-text!important;
+    background-color: $color-button-invert!important;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-text-strong;
-      background-color: $color-button-invert-hover;
+      color: $color-text-strong!important;
+      background-color: $color-button-invert-hover!important;
 
     }
 
@@ -119,15 +119,15 @@
 
   &.button--inactive {
 
-    color: rgba(0,0,0,.3);
-    background-color: $color-button-inactive;
+    color: rgba(0,0,0,.3)!important;
+    background-color: $color-button-inactive!important;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: rgba(0,0,0,.3);
-      background-color: $color-button-inactive;
+      color: rgba(0,0,0,.3)!important;
+      background-color: $color-button-inactive!important;
 
     }
 
