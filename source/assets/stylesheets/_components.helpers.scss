@@ -140,17 +140,23 @@
     display: flex;
     flex-flow: row wrap;
 
-    // margin-left: -1%;
-    // margin-right: -1%;
+  }
 
-    > * {
+  h2 {
 
-      // @include span(1 of 2);
-      // width: span(2 of 2);
+    font-size: ms(2);
 
-    //   margin: 1%;
+  }
 
-    }
+  h3 {
+
+    font-size: ms(1);
+
+  }
+
+  h4 {
+
+    font-size: ms(0);
 
   }
 
