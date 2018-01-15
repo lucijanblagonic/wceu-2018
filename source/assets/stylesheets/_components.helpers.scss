@@ -102,7 +102,7 @@
 // <div class="grid grid-three">
 //   <div class="outline">
 //     <h3>Hello world</h3>
-//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudan atibus commodi.</p>
 //   </div>
 //   <div class="note">
 //     <h3>Hello world</h3>
@@ -112,15 +112,47 @@
 //     <h3>Hello world</h3>
 //     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
 //   </div>
+//   <div class="outline">
+//     <h3>Hello world</h3>
+//     <p>Lorem consectetur adipisicing elit. Minus laudan atibus commodi.</p>
+//   </div>
+//   <div class="note">
+//     <h3>Hello world</h3>
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laudantium maiores nobis voluptatibus us laudantium maiores nobis voluptatibus commodi.</p>
+//   </div>
+//   <div class="highlight">
+//     <h3>Hello world</h3>
+//     <p>Lorem ipsum dodip isicing elit. Minus laudantium maiores nobis voluptatibus commodi.</p>
+//   </div>
 // </div>
 //
 // Style guide: 6.helpers.grid
 
 .grid {
 
-  display: grid;
-  grid-column-gap: $unit-m;
-  grid-row-gap: $unit-m;
+  // display: grid;
+  // grid-column-gap: $unit-m;
+  // grid-row-gap: $unit-m;
+
+  @include breakpoint(medium) {
+
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+
+    // margin-left: -1%;
+    // margin-right: -1%;
+
+    > * {
+
+      // @include span(1 of 2);
+      // width: span(2 of 2);
+
+    //   margin: 1%;
+
+    }
+
+  }
 
 }
 
@@ -128,7 +160,20 @@
 
   @include breakpoint(medium) {
 
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+
+    > * {
+
+      width: 49%;
+      margin-left: 2%;
+
+      &:nth-child(2n+1) {
+
+        margin-left: 0;
+
+      }
+
+    }
 
   }
 
@@ -138,13 +183,26 @@
 
   @include breakpoint(medium) {
 
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
 
   }
 
   @include breakpoint(large) {
 
-    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr;
+
+    > * {
+
+      width: 32%;
+      margin-left: 2%;
+
+      &:nth-child(3n+1) {
+
+        margin-left: 0;
+
+      }
+
+    }
 
   }
 
@@ -154,13 +212,45 @@
 
   @include breakpoint(medium) {
 
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+
+    > * {
+
+      width: 49%;
+      margin-left: 2%;
+
+      &:nth-child(2n+1) {
+
+        margin-left: 0;
+
+      }
+
+    }
 
   }
 
   @include breakpoint(large) {
 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    > * {
+
+      width: 23.5%;
+      margin-left: 2%;
+
+      &:nth-child(2n+1) {
+
+        margin-left: 2%;
+
+      }
+
+      &:nth-child(4n+1) {
+
+        margin-left: 0;
+
+      }
+
+    }
 
   }
 
