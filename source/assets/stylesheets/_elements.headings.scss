@@ -33,6 +33,24 @@ h4 {
 
 }
 
+h1 + h2 {
+
+  margin-top: $unit-s;
+
+}
+
+h2 + h3 {
+
+  margin-top: $unit-s;
+
+}
+
+h3 + h4 {
+
+  margin-top: $unit-s;
+
+}
+
 h1 {
 
   font-size: ms(4);
