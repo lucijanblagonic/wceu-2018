@@ -328,6 +328,24 @@
 }
 
 /*
+ * Favourite sessions
+ *
+ * Custom styles
+ */
+
+.wcb-favourite-session {
+
+  background-color: tint($color-link, 90%);
+
+}
+
+td.wcb-favourite-session a.fav-session-button {
+
+  color: $color-link-alt;
+
+}
+
+/*
  * Session labels
  *
  * Displaying labels for session groups
