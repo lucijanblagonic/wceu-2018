@@ -333,14 +333,9 @@
  * Custom styles
  */
 
-.wcb-favourite-session {
-
-  background-color: tint($color-link, 90%);
-
-}
-
-div.wcb-session-favourite-icon a.fav-session-button,
-#content a.fav-session-button {
+// Default + hover
+#content a.fav-session-button,
+div.wcb-session-favourite-icon a.fav-session-button {
 
   color: $color-grey-20;
 
@@ -354,11 +349,21 @@ div.wcb-session-favourite-icon a.fav-session-button,
 
 }
 
-td.wcb-favourite-session a.fav-session-button {
+// Favorite background
+.wcb-favourite-session {
+
+  background-color: tint($color-link, 90%);
+
+}
+
+// Favorite
+#content .wcb-favourite-session a.fav-session-button,
+.wcb-favourite-session div.wcb-session-favourite-icon a.fav-session-button {
 
   color: $color-link-alt;
 
 }
+
 
 /*
  * Session labels
