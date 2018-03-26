@@ -247,7 +247,10 @@
     }
 
     .wcb-track-track-1:before,
-    .wcb-track-track-2:before {
+    .wcb-track-track-2:before,
+    .wcb-track-workshop-1:before,
+    .wcb-track-workshop-2:before,
+    .wcb-track-workshop-3:before {
 
       display: block;
       padding: $unit-xs $unit-s;
@@ -276,21 +279,11 @@
 
     }
 
-    .wcb-track-track-1:before {
+    .wcb-track-workshops-1:before,
+    .wcb-track-workshops-2:before,
+    .wcb-track-workshops-3:before {
 
-      content: "Milky Way Track";
-
-    }
-
-    .wcb-track-track-2:before {
-
-      content: "Andromeda Track";
-
-    }
-
-    .wcb-track-track-3:before {
-
-      content: "Rosetta";
+      background-color: $color-brand-tertiary!important;
 
     }
 
