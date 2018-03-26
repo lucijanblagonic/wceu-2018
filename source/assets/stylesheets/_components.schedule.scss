@@ -339,6 +339,20 @@
 
 }
 
+a.fav-session-button {
+
+  color: $color-grey-20;
+
+  &:hover,
+  &:focus,
+  &:active {
+
+    color: $color-text-weak;
+
+  }
+
+}
+
 td.wcb-favourite-session a.fav-session-button {
 
   color: $color-link-alt;
