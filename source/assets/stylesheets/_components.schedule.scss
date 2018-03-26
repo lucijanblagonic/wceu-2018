@@ -263,7 +263,6 @@
       color: #fff;
       text-transform: uppercase;
       font-weight: $bold;
-      // background-color: $color-brand-secondary!important;
 
     }
 
@@ -283,6 +282,7 @@
     .wcb-track-workshop-2:before,
     .wcb-track-workshop-3:before {
 
+      color: $color-text-strong;
       background-color: $color-brand-tertiary!important;
 
     }
