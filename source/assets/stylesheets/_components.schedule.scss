@@ -125,9 +125,10 @@
 
     font-size: ms(0);
     line-height: ms(1);
-    font-weight: $bold;
+    font-weight: $regular;
     font-family: $font-brand-primary;
-    color: $color-text-strong;
+    color: $color-text-weak;
+    background-color: $color-grey-10;
 
   }
 
