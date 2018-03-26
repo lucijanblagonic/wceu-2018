@@ -54,6 +54,13 @@
 
   }
 
+  tbody tr:first-child td,
+  tbody tr:first-child th {
+
+    border-top: none;
+
+  }
+
   .wcpt-col-time,
   .wcpt-col-track {
 
