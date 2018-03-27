@@ -9,8 +9,7 @@
 //
 // Style guide: 6.schedule
 
-.schedule-wide,
-.schedule-extra-wide {
+.schedule-wide {
 
   .wcpt-schedule {
 
@@ -28,7 +27,6 @@
       width: 140%;
       margin-left: -20%;
       margin-right: -20%;
-      max-width: 98vw;
 
     }
 
@@ -36,17 +34,18 @@
 
 }
 
-.schedule-extra-wide {
+.schedule-wide.schedule-full {
 
-  @media (min-width: 100rem) {
+  @media (min-width: 100em) {
 
-    width: 180%;
-    margin-left: -40%;
-    margin-right: -40%;
+    width: 160%;
+    margin-left: -30%;
+    margin-right: -30%;
 
   }
 
 }
+
 
 .wcpt-schedule {
 
