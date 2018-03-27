@@ -9,17 +9,72 @@
 //
 // Style guide: 6.schedule
 
+.schedule-wide {
+
+  @include breakpoint(large) {
+
+    width: 120%;
+    margin-left: -10%;
+    margin-right: -10%;
+    max-width: 98vw;
+
+  }
+
+  @include breakpoint(extra-large) {
+
+    width: 140%;
+    margin-left: -20%;
+    margin-right: -20%;
+
+  }
+
+}
+
+.schedule-wide.schedule-full {
+
+  @media (min-width: 100em) {
+
+    width: 180%;
+    margin-left: -40%;
+    margin-right: -40%;
+
+  }
+
+}
+
+
 .wcpt-schedule {
 
-  border: rem(4) solid $color-brand-secondary;
+  border: rem(1) solid $color-border-weak;
   margin-bottom: $unit-default;
   background-color: #fff;
+
+  a {
+
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      box-shadow: none;
+
+    }
+
+  }
 
   td,
   th {
 
     vertical-align: top;
-    border-color: $color-border-normal;
+    border-color: $color-border-weak;
+
+  }
+
+  tbody tr:first-child td,
+  tbody tr:first-child th {
+
+    border-top: none;
 
   }
 
@@ -27,24 +82,17 @@
   .wcpt-col-track {
 
     border-top: none;
-    background-color: $color-brand-tertiary;
+    background-color: $color-brand-quaternary;
     color: $color-text-strong-invert;
+    text-transform: uppercase;
 
   }
 
   .global-session td {
 
     vertical-align: middle;
-    // border-top: none;
 
   }
-
-  // .global-session + tr td {
-
-  //   border-top: none;
-
-  // }
-
 
   /* Head */
   .wcpt-col-time {
@@ -56,6 +104,57 @@
   .wcpt-col-track {
 
     width: 30%;
+    width: 400px;
+
+    &:nth-child(2) {
+
+      .schedule-tracks &,
+      .schedule-full & {
+
+        color: #fff;
+        background-color: $color-brand-primary;
+
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      .schedule-tracks &,
+      .schedule-full & {
+
+        color: #fff;
+        background-color: $color-brand-secondary;
+
+      }
+
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+
+      .schedule-workshops & {
+
+        color: $color-text-strong;
+        background-color: $color-brand-tertiary;
+
+      }
+
+    }
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+
+      .schedule-full & {
+
+        color: $color-text-strong;
+        background-color: $color-brand-tertiary;
+
+      }
+
+    }
 
   }
 
@@ -65,9 +164,10 @@
 
     font-size: ms(0);
     line-height: ms(1);
-    font-weight: $bold;
+    font-weight: $regular;
     font-family: $font-brand-primary;
-    color: $color-text-strong;
+    color: $color-text-weak;
+    background-color: $color-grey-10;
 
   }
 
@@ -82,29 +182,47 @@
 
   }
 
-  .global-session {
+  .wcpt-session-type-custom {
 
-    &.registration,
-    &.lunch,
-    &.break,
-    &.morning-break,
-    &.afternoon-break {
+    color: $color-text-strong;
+    background-color: $color-grey-10;
 
-      .wcpt-session-title {
+    .wcpt-session-title {
 
-        margin-bottom: 0;
+      margin-bottom: 0;
 
-        font-size: ms(2);
-        line-height: ms(1);
-        font-family: $font-brand-secondary;
-        text-transform: uppercase;
-        color: $color-text-strong;
-
-      }
+      font-size: ms(1);
+      line-height: ms(1);
+      text-transform: uppercase;
 
     }
 
   }
+
+  // .global-session {
+
+  //   &.registration,
+  //   &.lunch,
+  //   &.break,
+  //   &.morning-break,
+  //   &.afternoon-break {
+
+  //     color: $color-text-strong;
+  //     background-color: $color-grey-10;
+
+  //     .wcpt-session-title {
+
+  //       margin-bottom: 0;
+
+  //       font-size: ms(1);
+  //       line-height: ms(1);
+  //       text-transform: uppercase;
+
+  //     }
+
+  //   }
+
+  // }
 
   .wcpt-session-speakers {
 
@@ -118,21 +236,55 @@
 
   }
 
-  .wcpt-session-empty {}
+  .wcpt-session-empty {
 
-  .global-session {
+      border-top: 0 none;
 
-    /* Target specifically */
-    &.registration,
-    &.lunch,
-    &.break,
-    &.morning-break,
-    &.afternoon-break {
+  }
+  .wcb-session-category-workshop-3h {
 
-      background-color: $color-brand-secondary;
+      border-bottom: 0 none;
 
-    }
+  }
+  .wcpt-session-empty,
+  .wcpt-session-type-session {
 
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-right-width: 1px;
+      border-right-style: solid;
+
+  }
+
+  // .global-session {
+
+  //   /* Target specifically */
+  //   &.registration,
+  //   &.lunch,
+  //   &.break,
+  //   &.morning-break,
+  //   &.afternoon-break {
+
+  //     // background-color: $color-brand-secondary;
+
+  //   }
+
+  // }
+
+  .wcpt-schedule .wcpt-session-empty {
+      border-top: 0 none;
+  }
+
+  .wcpt-schedule .wcb-session-category-workshop-3h {
+      border-bottom: 0 none;
+  }
+
+  .wcpt-schedule .wcpt-session-empty,
+  .wcpt-schedule .wcpt-session-type-session {
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-right-width: 1px;
+      border-right-style: solid;
   }
 
   /*
@@ -164,14 +316,16 @@
 
       margin-bottom: $unit-s;
       display: block;
-      border: rem(4) solid $color-brand-secondary;
-      // border: 1px solid $color-border-normal;
+      // border: rem(4) solid $color-brand-secondary;
+      border: 1px solid $color-border-weak;
 
     }
 
     .wcb-track-track-1:before,
     .wcb-track-track-2:before,
-    .wcb-track-track-3:before {
+    .wcb-track-workshop-1:before,
+    .wcb-track-workshop-2:before,
+    .wcb-track-workshop-3:before {
 
       display: block;
       padding: $unit-xs $unit-s;
@@ -181,28 +335,30 @@
       margin-bottom: $unit-xs;
       border: none;
 
-      color: $color-text-strong;
+      color: #fff;
+      text-transform: uppercase;
       font-weight: $bold;
-      background-color: $color-brand-secondary!important;
-
 
     }
 
     .wcb-track-track-1:before {
 
-      content: "Track 1";
+      background-color: $color-brand-primary!important;
 
     }
 
     .wcb-track-track-2:before {
 
-      content: "Track 2";
+      background-color: $color-brand-secondary!important;
 
     }
 
-    .wcb-track-track-3:before {
+    .wcb-track-workshop-1:before,
+    .wcb-track-workshop-2:before,
+    .wcb-track-workshop-3:before {
 
-      content: "Track 3";
+      color: $color-text-strong;
+      background-color: $color-brand-tertiary!important;
 
     }
 
@@ -226,7 +382,7 @@
       padding-bottom: $unit-s;
 
       color: $color-text-strong-invert;
-      background-color: $color-brand-tertiary;
+      background-color: $color-brand-quaternary;
 
     }
 
@@ -245,6 +401,44 @@
   }
 
 }
+
+/*
+ * Favourite sessions
+ *
+ * Custom styles
+ */
+
+// Default + hover
+#content a.fav-session-button,
+div.wcb-session-favourite-icon a.fav-session-button {
+
+  color: $color-grey-20;
+
+  &:hover,
+  &:focus,
+  &:active {
+
+    color: $color-text-weak;
+
+  }
+
+}
+
+// Favorite background
+.wcb-favourite-session {
+
+  background-color: tint($color-link, 90%);
+
+}
+
+// Favorite
+#content .wcb-favourite-session a.fav-session-button,
+.wcb-favourite-session div.wcb-session-favourite-icon a.fav-session-button {
+
+  color: $color-link-alt;
+
+}
+
 
 /*
  * Session labels
@@ -273,22 +467,75 @@ $session-type-color-business:    #575357; // Ash
     display: inline-block;
     padding: rem(1) rem(6);
 
-    border: 2px solid $session-color;
+    // border: 2px solid $session-color;
 
     position: absolute;
     bottom: $unit-s;
 
     font-size: ms(-1);
     line-height: ms(1);
+    text-transform: uppercase;
+    font-weight: $bold;
     color: $color-text-strong;
-    border-radius: $border-radius-large;
-    background: #fff;
+    border-radius: $border-radius-small;
+    background: $color-grey-10;
 
     content: "#{$session-label}";
 
   }
 
 }
+
+.wcb-session-category-lightning-talk {}
+
+.wcb-session-category-keynote {}
+
+.wcb-session-category-workshop-3h,
+.wcb-session-category-workshop-60min,
+.wcb-session-category-workshop-90min {
+
+  .wcpt-session-title {
+
+  }
+
+  .wcpt-session-title:after {
+
+    display: inline-block;
+    margin-left: $unit-xs;
+    padding: rem(1) rem(6);
+
+    font-size: ms(-1);
+    line-height: ms(1);
+    text-transform: uppercase;
+    font-weight: $regular;
+    color: $color-text-strong;
+    border-radius: $border-radius-small;
+    background: $color-grey-10;
+
+  }
+
+}
+
+.wcb-session-category-workshop-3h .wcpt-session-title:after {
+
+  content: "3 hours";
+
+}
+.wcb-session-category-workshop-60min .wcpt-session-title:after {
+
+  content: "60 min";
+
+}
+
+.wcb-session-category-workshop-90min .wcpt-session-title:after {
+
+  content: "90 min";
+
+}
+
+
+.opening-remarks {}
+
 
 
 // Development
