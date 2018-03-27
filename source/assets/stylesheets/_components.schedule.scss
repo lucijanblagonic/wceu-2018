@@ -9,9 +9,19 @@
 //
 // Style guide: 6.schedule
 
-.schedule-wide {
+.schedule-wide,
+.schedule-extra-wide {
 
   .wcpt-schedule {
+
+    @include breakpoint(large) {
+
+      width: 120%;
+      margin-left: -10%;
+      margin-right: -10%;
+      max-width: 98vw;
+
+    }
 
     @include breakpoint(extra-large) {
 
@@ -28,12 +38,11 @@
 
 .schedule-extra-wide {
 
-  @include breakpoint(extra-large) {
+  @media (min-width: 100rem) {
 
     width: 180%;
     margin-left: -40%;
     margin-right: -40%;
-    max-width: 98vw;
 
   }
 
