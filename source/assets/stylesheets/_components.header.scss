@@ -19,20 +19,23 @@
 
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-image: $site-hero-path-small;
+  // background-image: $site-hero-path-small;
+  background-image: $site-hero-path-wide-temp;
   background-color: $site-hero-background;
 
   @include breakpoint(medium) {
 
     background-size: cover;
-    background-image: $site-hero-path-large;
+    // background-image: $site-hero-path-large;
+    background-image: $site-hero-path-wide-temp;
     background-position: 50% 100%;
 
   }
 
   @media (min-width: 1800px) {
 
-    background-image: $site-hero-path-wide;
+    // background-image: $site-hero-path-wide;
+    background-image: $site-hero-path-wide-temp;
 
   }
 
