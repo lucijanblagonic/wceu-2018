@@ -195,7 +195,25 @@
 
   }
 
-  .wcpt-session-empty {}
+  .wcpt-session-empty {
+
+      border-top: 0 none;
+
+  }
+  .wcb-session-category-workshop-3h {
+
+      border-bottom: 0 none;
+
+  }
+  .wcpt-session-empty,
+  .wcpt-session-type-session {
+
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-right-width: 1px;
+      border-right-style: solid;
+
+  }
 
   .global-session {
 
@@ -210,6 +228,22 @@
 
     }
 
+  }
+
+  .wcpt-schedule .wcpt-session-empty {
+      border-top: 0 none;
+  }
+
+  .wcpt-schedule .wcb-session-category-workshop-3h {
+      border-bottom: 0 none;
+  }
+
+  .wcpt-schedule .wcpt-session-empty,
+  .wcpt-schedule .wcpt-session-type-session {
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-right-width: 1px;
+      border-right-style: solid;
   }
 
   /*
