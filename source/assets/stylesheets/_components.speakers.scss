@@ -54,38 +54,34 @@
     padding: 16px;
     font-size: ms(0);
     line-height: ms(1);
-    margin-top:10px
+    margin-top:10px;
 
-  }
+    a {
 
-  h2 a {
+      display: inline-block;
 
-    display: block;
-    // color:#000000;
-    // font-size: ms(0, 17px);
-    // margin: 0;
-    // letter-spacing: .1px;
+      &:hover,
+      &:focus,
+      &:active {
 
-  }
+      }
 
-  h2 a:hover {
+    }
 
-    // text-decoration: underline;
+    &:before {
 
-  }
+      content: "";
+      background:url('https://2018.europe.wordcamp.org/files/2018/03/wceu-stripes-horizontal.png') no-repeat right top;
+      width: 33%;
+      height: 24px;
+      display:block;
+      margin-left: -16px;
+      margin-top: -42px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 999;
 
-  h2:before {
-
-    content: "";
-    background:url('https://2018.europe.wordcamp.org/files/2018/03/wceu-stripes-horizontal.png') no-repeat right top;
-    width: 33%;
-    height: 24px;
-    display:block;
-    margin-left: -16px;
-    margin-top: -42px;
-    margin-bottom: 15px;
-    position: relative;
-    z-index: 999;
+    }
 
   }
 
