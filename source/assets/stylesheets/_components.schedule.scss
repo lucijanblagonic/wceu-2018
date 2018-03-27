@@ -91,16 +91,8 @@
   .global-session td {
 
     vertical-align: middle;
-    // border-top: none;
 
   }
-
-  // .global-session + tr td {
-
-  //   border-top: none;
-
-  // }
-
 
   /* Head */
   .wcpt-col-time {
@@ -190,30 +182,47 @@
 
   }
 
-  .global-session {
+  .wcpt-session-type-custom {
 
-    &.registration,
-    &.lunch,
-    &.break,
-    &.morning-break,
-    &.afternoon-break {
+    color: $color-text-strong;
+    background-color: $color-grey-10;
 
-      color: $color-text-strong;
-      background-color: $color-grey-10;
+    .wcpt-session-title {
 
-      .wcpt-session-title {
+      margin-bottom: 0;
 
-        margin-bottom: 0;
-
-        font-size: ms(1);
-        line-height: ms(1);
-        text-transform: uppercase;
-
-      }
+      font-size: ms(1);
+      line-height: ms(1);
+      text-transform: uppercase;
 
     }
 
   }
+
+  // .global-session {
+
+  //   &.registration,
+  //   &.lunch,
+  //   &.break,
+  //   &.morning-break,
+  //   &.afternoon-break {
+
+  //     color: $color-text-strong;
+  //     background-color: $color-grey-10;
+
+  //     .wcpt-session-title {
+
+  //       margin-bottom: 0;
+
+  //       font-size: ms(1);
+  //       line-height: ms(1);
+  //       text-transform: uppercase;
+
+  //     }
+
+  //   }
+
+  // }
 
   .wcpt-session-speakers {
 
@@ -247,20 +256,20 @@
 
   }
 
-  .global-session {
+  // .global-session {
 
-    /* Target specifically */
-    &.registration,
-    &.lunch,
-    &.break,
-    &.morning-break,
-    &.afternoon-break {
+  //   /* Target specifically */
+  //   &.registration,
+  //   &.lunch,
+  //   &.break,
+  //   &.morning-break,
+  //   &.afternoon-break {
 
-      // background-color: $color-brand-secondary;
+  //     // background-color: $color-brand-secondary;
 
-    }
+  //   }
 
-  }
+  // }
 
   .wcpt-schedule .wcpt-session-empty {
       border-top: 0 none;
@@ -487,13 +496,12 @@ $session-type-color-business:    #575357; // Ash
 
   .wcpt-session-title {
 
-    margin-right: $unit-xs;
-
   }
 
   .wcpt-session-title:after {
 
     display: inline-block;
+    margin-left: $unit-xs;
     padding: rem(1) rem(6);
 
     font-size: ms(-1);
