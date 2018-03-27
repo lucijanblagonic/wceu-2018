@@ -478,10 +478,53 @@ $session-type-color-business:    #575357; // Ash
 }
 
 .wcb-session-category-lightning-talk {}
+
 .wcb-session-category-keynote {}
-.wcb-session-category-workshop-3h {}
-.wcb-session-category-workshop-60min {}
-.wcb-session-category-workshop-90min {}
+
+.wcb-session-category-workshop-3h,
+.wcb-session-category-workshop-60min,
+.wcb-session-category-workshop-90min {
+
+  .wcpt-session-title {
+
+    margin-right: $unit-xs;
+
+  }
+
+  .wcpt-session-title:after {
+
+    display: inline-block;
+    padding: rem(1) rem(6);
+
+    font-size: ms(-1);
+    line-height: ms(1);
+    text-transform: uppercase;
+    font-weight: $regular;
+    color: $color-text-strong;
+    border-radius: $border-radius-small;
+    background: $color-grey-10;
+
+  }
+
+}
+
+.wcb-session-category-workshop-3h .wcpt-session-title:after {
+
+  content: "3 hours";
+
+}
+.wcb-session-category-workshop-60min .wcpt-session-title:after {
+
+  content: "60 min";
+
+}
+
+.wcb-session-category-workshop-90min .wcpt-session-title:after {
+
+  content: "90 min";
+
+}
+
 
 .opening-remarks {}
 
