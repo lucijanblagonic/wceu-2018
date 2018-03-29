@@ -9,17 +9,107 @@
 //
 // Style guide: 6.schedule
 
+.schedule-container {
+
+  margin-bottom: $unit-default;
+
+}
+
+.schedule-scroll {
+
+  @include breakpoint(medium) {
+
+    position: relative;
+    overflow-x: auto;
+    border-right: 1px solid $color-border-weak;
+
+  }
+
+  @include breakpoint(large) {
+
+    border-right: none;
+
+  }
+
+}
+
+.schedule-wide,
+.schedule-extra-wide {
+
+  @include breakpoint(large) {
+
+    width: 120%;
+    margin-left: -10%;
+    margin-right: -10%;
+    max-width: 98vw;
+
+  }
+
+  @include breakpoint(extra-large) {
+
+    width: 140%;
+    margin-left: -20%;
+    margin-right: -20%;
+
+  }
+
+}
+
+.schedule-extra-wide {
+
+  @media (min-width: 100em) {
+
+    width: 180%;
+    margin-left: -40%;
+    margin-right: -40%;
+
+  }
+
+}
+
+
+
+/*
+ * Table
+ */
+
 .wcpt-schedule {
 
-  border: rem(4) solid $color-brand-secondary;
-  margin-bottom: $unit-default;
+  max-width: 100%;
+  width: 100%;
+
+  border: rem(1) solid $color-border-weak;
+  margin-bottom: 0;
+  // margin-bottom: $unit-default;
+
   background-color: #fff;
+
+  a {
+
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      box-shadow: none;
+
+    }
+
+  }
 
   td,
   th {
 
     vertical-align: top;
-    border-color: $color-border-normal;
+    border-color: $color-border-weak;
+
+  }
+
+  tbody tr:first-child td,
+  tbody tr:first-child th {
+
+    border-top: none;
 
   }
 
@@ -27,24 +117,17 @@
   .wcpt-col-track {
 
     border-top: none;
-    background-color: $color-brand-tertiary;
+    background-color: $color-brand-quaternary;
     color: $color-text-strong-invert;
+    text-transform: uppercase;
 
   }
 
   .global-session td {
 
     vertical-align: middle;
-    // border-top: none;
 
   }
-
-  // .global-session + tr td {
-
-  //   border-top: none;
-
-  // }
-
 
   /* Head */
   .wcpt-col-time {
@@ -56,6 +139,57 @@
   .wcpt-col-track {
 
     width: 30%;
+    width: 400px;
+
+    &:nth-child(2) {
+
+      .schedule-tracks &,
+      .schedule-full & {
+
+        color: #fff;
+        background-color: $color-brand-primary;
+
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      .schedule-tracks &,
+      .schedule-full & {
+
+        color: #fff;
+        background-color: $color-brand-secondary;
+
+      }
+
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+
+      .schedule-workshops & {
+
+        color: $color-text-strong;
+        background-color: $color-brand-tertiary;
+
+      }
+
+    }
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+
+      .schedule-full & {
+
+        color: $color-text-strong;
+        background-color: $color-brand-tertiary;
+
+      }
+
+    }
 
   }
 
@@ -65,9 +199,10 @@
 
     font-size: ms(0);
     line-height: ms(1);
-    font-weight: $bold;
+    font-weight: $regular;
     font-family: $font-brand-primary;
-    color: $color-text-strong;
+    color: $color-text-weak;
+    background-color: $color-grey-10;
 
   }
 
@@ -82,29 +217,47 @@
 
   }
 
-  .global-session {
+  .wcpt-session-type-custom {
 
-    &.registration,
-    &.lunch,
-    &.break,
-    &.morning-break,
-    &.afternoon-break {
+    color: $color-text-strong;
+    background-color: $color-grey-10;
 
-      .wcpt-session-title {
+    .wcpt-session-title {
 
-        margin-bottom: 0;
+      margin-bottom: 0;
 
-        font-size: ms(2);
-        line-height: ms(1);
-        font-family: $font-brand-secondary;
-        text-transform: uppercase;
-        color: $color-text-strong;
-
-      }
+      font-size: ms(1);
+      line-height: ms(1);
+      text-transform: uppercase;
 
     }
 
   }
+
+  // .global-session {
+
+  //   &.registration,
+  //   &.lunch,
+  //   &.break,
+  //   &.morning-break,
+  //   &.afternoon-break {
+
+  //     color: $color-text-strong;
+  //     background-color: $color-grey-10;
+
+  //     .wcpt-session-title {
+
+  //       margin-bottom: 0;
+
+  //       font-size: ms(1);
+  //       line-height: ms(1);
+  //       text-transform: uppercase;
+
+  //     }
+
+  //   }
+
+  // }
 
   .wcpt-session-speakers {
 
@@ -118,18 +271,31 @@
 
   }
 
-  .wcpt-session-empty {}
+  /*
+   * Desktop schedule
+   *
+   * Tweaks for desktop only
+   */
 
-  .global-session {
+  @include breakpoint(medium) {
 
-    /* Target specifically */
-    &.registration,
-    &.lunch,
-    &.break,
-    &.morning-break,
-    &.afternoon-break {
+    .wcpt-session-empty {
 
-      background-color: $color-brand-secondary;
+        border-top: 0 none;
+
+    }
+    .wcb-session-category-workshop-3h {
+
+        border-bottom: 0 none;
+
+    }
+    .wcpt-session-empty,
+    .wcpt-session-type-session {
+
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-right-width: 1px;
+        border-right-style: solid;
 
     }
 
@@ -164,14 +330,12 @@
 
       margin-bottom: $unit-s;
       display: block;
-      border: rem(4) solid $color-brand-secondary;
-      // border: 1px solid $color-border-normal;
+      // border: rem(4) solid $color-brand-secondary;
+      border: 1px solid $color-border-weak;
 
     }
 
-    .wcb-track-track-1:before,
-    .wcb-track-track-2:before,
-    .wcb-track-track-3:before {
+    .wcpt-session-type-session:before {
 
       display: block;
       padding: $unit-xs $unit-s;
@@ -181,30 +345,57 @@
       margin-bottom: $unit-xs;
       border: none;
 
-      color: $color-text-strong;
+      content: attr( data-track-title );
+
+      // color: #fff;
+      color: $color-text-weak;
+      text-transform: uppercase;
       font-weight: $bold;
-      background-color: $color-brand-secondary!important;
-
 
     }
 
-    .wcb-track-track-1:before {
+    .wcb-track-track-1:before,
+    .wcb-track-track-2:before,
+    .wcb-track-workshop-1:before,
+    .wcb-track-workshop-2:before,
+    .wcb-track-workshop-3:before {
 
-      content: "Track 1";
+      // display: block;
+      // padding: $unit-xs $unit-s;
+      // margin-top: -($unit-xs);
+      // margin-left: -($unit-s);
+      // margin-right: -($unit-s);
+      // margin-bottom: $unit-xs;
+      // border: none;
+
+      color: $color-text;
+      background-color: $color-grey-10;
+
+      text-transform: uppercase;
+      font-weight: $bold;
 
     }
 
-    .wcb-track-track-2:before {
+    // .wcb-track-track-1:before {
 
-      content: "Track 2";
+    //   background-color: $color-brand-primary!important;
 
-    }
+    // }
 
-    .wcb-track-track-3:before {
+    // .wcb-track-track-2:before {
 
-      content: "Track 3";
+    //   background-color: $color-brand-secondary!important;
 
-    }
+    // }
+
+    // .wcb-track-workshop-1:before,
+    // .wcb-track-workshop-2:before,
+    // .wcb-track-workshop-3:before {
+
+    //   color: $color-text-strong;
+    //   background-color: $color-brand-tertiary!important;
+
+    // }
 
     .wcpt-session-type-custom:before {
 
@@ -226,7 +417,7 @@
       padding-bottom: $unit-s;
 
       color: $color-text-strong-invert;
-      background-color: $color-brand-tertiary;
+      background-color: $color-brand-quaternary;
 
     }
 
@@ -245,6 +436,51 @@
   }
 
 }
+
+/*
+ * Favourite sessions
+ *
+ * Custom styles
+ */
+
+// Default + hover
+#content a.fav-session-button,
+div.wcb-session-favourite-icon a.fav-session-button {
+
+  color: $color-grey-20;
+
+  &:hover,
+  &:focus,
+  &:active {
+
+    color: $color-text-weak;
+
+  }
+
+}
+
+// Favorite background
+.wcb-favourite-session {
+
+  background-color: transparent;
+  // background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.0));
+
+}
+
+.wcpt-schedule div.wcb-session-favourite-icon {
+
+  width: auto;
+
+}
+
+// Favorite
+#content .wcb-favourite-session a.fav-session-button,
+.wcb-favourite-session div.wcb-session-favourite-icon a.fav-session-button {
+
+  color: $color-link-alt;
+
+}
+
 
 /*
  * Session labels
@@ -273,16 +509,18 @@ $session-type-color-business:    #575357; // Ash
     display: inline-block;
     padding: rem(1) rem(6);
 
-    border: 2px solid $session-color;
+    // border: 2px solid $session-color;
 
     position: absolute;
     bottom: $unit-s;
 
     font-size: ms(-1);
     line-height: ms(1);
+    text-transform: uppercase;
+    font-weight: $bold;
     color: $color-text-strong;
-    border-radius: $border-radius-large;
-    background: #fff;
+    border-radius: $border-radius-small;
+    background: $color-grey-10;
 
     content: "#{$session-label}";
 
@@ -290,6 +528,52 @@ $session-type-color-business:    #575357; // Ash
 
 }
 
+.wcb-session-category-lightning-talk {}
+
+.wcb-session-category-keynote {}
+
+.wcb-session-category-workshop-3h,
+.wcb-session-category-workshop-60min,
+.wcb-session-category-workshop-90min {
+
+  .wcpt-session-title {
+
+  }
+
+  .wcpt-session-title:after {
+
+    display: inline-block;
+    margin-left: $unit-xs;
+    padding: rem(1) rem(6);
+
+    font-size: ms(-2);
+    line-height: ms(1);
+    text-transform: uppercase;
+    font-weight: $bold;
+    color: $color-text-strong;
+    // border-radius: $border-radius-small;
+    // background: $color-grey-10;
+
+  }
+
+}
+
+.wcb-session-category-workshop-3h .wcpt-session-title:after {
+
+  content: "3 hours";
+
+}
+.wcb-session-category-workshop-60min .wcpt-session-title:after {
+
+  content: "60 min";
+
+}
+
+.wcb-session-category-workshop-90min .wcpt-session-title:after {
+
+  content: "90 min";
+
+}
 
 // Development
 .wcb-session-selfish-accessibility,
@@ -349,117 +633,116 @@ $session-type-color-business:    #575357; // Ash
  * Old schedule
  */
 
+// .wcb-session-empathy-and-acceptance-in-design-and-community,
+// .wcb-session-from-blogger-to-wordpress-core-committer,
+// .wcb-session-handling-anxiety,
+// .wcb-session-my-friend-the-impostor-syndrome,
+// .wcb-session-short-talks-03,
+// .wcb-session-tbd,
+// .wcb-session-the-2016-plugin-directory,
+// .wcb-session-the-rebirth-of-the-italian-community,
+// .wcb-session-the-science-of-happiness {
 
-.wcb-session-empathy-and-acceptance-in-design-and-community,
-.wcb-session-from-blogger-to-wordpress-core-committer,
-.wcb-session-handling-anxiety,
-.wcb-session-my-friend-the-impostor-syndrome,
-.wcb-session-short-talks-03,
-.wcb-session-tbd,
-.wcb-session-the-2016-plugin-directory,
-.wcb-session-the-rebirth-of-the-italian-community,
-.wcb-session-the-science-of-happiness {
+//   @include session-label('Community', #176799);
 
-  @include session-label('Community', #176799);
+// }
 
-}
+// .wcb-session-a-look-into-calypso,
+// .wcb-session-assistive-technology-demo,
+// .wcb-session-code-is-poetry-a-musicians-tale,
+// .wcb-session-connected-wordpress,
+// .wcb-session-editing-text-at-the-new-york-times,
+// .wcb-session-internationalizing-the-new-york-times,
+// .wcb-session-modernizing-wordpress-search-with-elasticsearch,
+// .wcb-session-moving-forward-with-a-mature-platform,
+// .wcb-session-my-condolences-youre-now-the-maintainer-of-a-popular-open-source-project,
+// .wcb-session-open-source-project-management-at-scale-how-1300-people-improved-drupal-8s-multilingual-features,
+// .wcb-session-seven-times-faster-a-study-in-frontend-optimization,
+// .wcb-session-short-talks-01,
+// .wcb-session-short-talks-02,
+// .wcb-session-short-talks-04,
+// .wcb-session-tba-2,
+// .wcb-session-the-swiss-knife-of-a-wordpress-developer,
+// .wcb-session-the-ultimate-rest-api-dev-talk,
+// .wcb-session-the-ultimate-rest-api-talk,
+// .wcb-session-the-ultimate-rest-api-talk-part-2,
+// .wcb-session-thinking-outside-the-boxmodel-an-introduction-to-flexbox,
+// .wcb-session-using-composer-to-create-manageable-wordpress-websites,
+// .wcb-session-using-the-rest-api-and-javascript-to-create-better-wordpress-interfaces,
+// .wcb-session-whats-new-in-php7-and-what-to-expect-in-php7-1,
+// .wcb-session-wordpress-hardening-ten-tips-in-ten-minutes,
+// .wcb-session-wordpress-state-of-the-accessibility {
 
-.wcb-session-a-look-into-calypso,
-.wcb-session-assistive-technology-demo,
-.wcb-session-code-is-poetry-a-musicians-tale,
-.wcb-session-connected-wordpress,
-.wcb-session-editing-text-at-the-new-york-times,
-.wcb-session-internationalizing-the-new-york-times,
-.wcb-session-modernizing-wordpress-search-with-elasticsearch,
-.wcb-session-moving-forward-with-a-mature-platform,
-.wcb-session-my-condolences-youre-now-the-maintainer-of-a-popular-open-source-project,
-.wcb-session-open-source-project-management-at-scale-how-1300-people-improved-drupal-8s-multilingual-features,
-.wcb-session-seven-times-faster-a-study-in-frontend-optimization,
-.wcb-session-short-talks-01,
-.wcb-session-short-talks-02,
-.wcb-session-short-talks-04,
-.wcb-session-tba-2,
-.wcb-session-the-swiss-knife-of-a-wordpress-developer,
-.wcb-session-the-ultimate-rest-api-dev-talk,
-.wcb-session-the-ultimate-rest-api-talk,
-.wcb-session-the-ultimate-rest-api-talk-part-2,
-.wcb-session-thinking-outside-the-boxmodel-an-introduction-to-flexbox,
-.wcb-session-using-composer-to-create-manageable-wordpress-websites,
-.wcb-session-using-the-rest-api-and-javascript-to-create-better-wordpress-interfaces,
-.wcb-session-whats-new-in-php7-and-what-to-expect-in-php7-1,
-.wcb-session-wordpress-hardening-ten-tips-in-ten-minutes,
-.wcb-session-wordpress-state-of-the-accessibility {
+//   @include session-label('Development', #ebe700);
 
-  @include session-label('Development', #ebe700);
+// }
 
-}
+// .wcb-session-art-directed-web-typography,
+// .wcb-session-caring-is-the-coolest-thing-ive-ever-seen-anyone-do-thoughts-on-wordpress-plugin-ui,
+// .wcb-session-emotional-interfaces,
+// .wcb-session-forefront-a-new-front-end-experience,
+// .wcb-session-making-ads-great-again,
+// .wcb-session-moving-the-design-process-to-the-browser {
 
-.wcb-session-art-directed-web-typography,
-.wcb-session-caring-is-the-coolest-thing-ive-ever-seen-anyone-do-thoughts-on-wordpress-plugin-ui,
-.wcb-session-emotional-interfaces,
-.wcb-session-forefront-a-new-front-end-experience,
-.wcb-session-making-ads-great-again,
-.wcb-session-moving-the-design-process-to-the-browser {
+//   @include session-label('Design', #d95e2b);
 
-  @include session-label('Design', #d95e2b);
+// }
 
-}
+// .wcb-session-closing-the-gap-developing-your-support-philosophy,
+// .wcb-session-cultivating-happy-teams-for-better-business-panel,
+// .wcb-session-dealing-with-different-client-cultures,
+// .wcb-session-how-newscorp-australia-scaled-wordpress-to-host-australias-largest-news-websites-on-wordpress-vip,
+// .wcb-session-privacy-and-the-web-are-you-doing-what-it-takes,
+// .wcb-session-proudly-powered-by-the-wordpress-rest-api,
+// .wcb-session-rebuilding-babel-communication-in-a-virtual-world,
+// .wcb-session-remote-is-the-new-black-to-be-changed,
+// .wcb-session-reviews-the-good-the-bad-and-the-stalker,
+// .wcb-session-the-discovery-definition-approach-to-project-planning,
+// .wcb-session-the-making-of-calypso-a-team-perspective,
+// .wcb-session-unsafe-harbors-data-protection-strikes-back,
+// .wcb-session-you-are-too-cheap,
+// .wcb-session-you-are-too-cheap-2,
+// .wcb-session-zen-and-the-art-of-online-communication {
 
-.wcb-session-closing-the-gap-developing-your-support-philosophy,
-.wcb-session-cultivating-happy-teams-for-better-business-panel,
-.wcb-session-dealing-with-different-client-cultures,
-.wcb-session-how-newscorp-australia-scaled-wordpress-to-host-australias-largest-news-websites-on-wordpress-vip,
-.wcb-session-privacy-and-the-web-are-you-doing-what-it-takes,
-.wcb-session-proudly-powered-by-the-wordpress-rest-api,
-.wcb-session-rebuilding-babel-communication-in-a-virtual-world,
-.wcb-session-remote-is-the-new-black-to-be-changed,
-.wcb-session-reviews-the-good-the-bad-and-the-stalker,
-.wcb-session-the-discovery-definition-approach-to-project-planning,
-.wcb-session-the-making-of-calypso-a-team-perspective,
-.wcb-session-unsafe-harbors-data-protection-strikes-back,
-.wcb-session-you-are-too-cheap,
-.wcb-session-you-are-too-cheap-2,
-.wcb-session-zen-and-the-art-of-online-communication {
+//   @include session-label('Business', #e32d88);
 
-  @include session-label('Business', #e32d88);
+// }
 
-}
+// .wcb-session-beyond-seo-copywriting-for-professionals,
+// .wcb-session-publish-in-10-minutes-per-day,
+// .wcb-session-your-content-is-trapped-how-a-proper-content-architecture-can-save-it {
 
-.wcb-session-beyond-seo-copywriting-for-professionals,
-.wcb-session-publish-in-10-minutes-per-day,
-.wcb-session-your-content-is-trapped-how-a-proper-content-architecture-can-save-it {
+//   @include session-label('Content', #e32d88);
 
-  @include session-label('Content', #e32d88);
+// }
 
-}
+// .wcb-session-lets-write-a-plugin-demystifying-the-art-and-science-of-plugin-development,
+// .wcb-session-multisite,
+// .wcb-session-the-ultimate-wordpress-development-environment,
+// .wcb-session-themes-plugins-in-harmony,
+// .wcb-session-theming-in-wordpress-where-do-i-start,
+// .wcb-session-website-security-the-big-picture-w-simple-steps-to-take,
+// .wcb-session-wp-cli-for-beginners {
 
-.wcb-session-lets-write-a-plugin-demystifying-the-art-and-science-of-plugin-development,
-.wcb-session-multisite,
-.wcb-session-the-ultimate-wordpress-development-environment,
-.wcb-session-themes-plugins-in-harmony,
-.wcb-session-theming-in-wordpress-where-do-i-start,
-.wcb-session-website-security-the-big-picture-w-simple-steps-to-take,
-.wcb-session-wp-cli-for-beginners {
+//   @include session-label('Development for Beginners', #ebe700);
 
-  @include session-label('Development for Beginners', #ebe700);
+// }
 
-}
+// .wcb-session-contributing-to-wordpress-for-business-profession-the-community,
+// .wcb-session-japanese-wordpress-community,
+// .wcb-session-keys-to-growing-developing-your-wordpress-meetup,
+// .wcb-session-managing-a-local-wordpress-community {
 
-.wcb-session-contributing-to-wordpress-for-business-profession-the-community,
-.wcb-session-japanese-wordpress-community,
-.wcb-session-keys-to-growing-developing-your-wordpress-meetup,
-.wcb-session-managing-a-local-wordpress-community {
+//   @include session-label('Running a local WP community', #176799);
 
-  @include session-label('Running a local WP community', #176799);
+// }
 
-}
+// .wcb-session-changing-the-world-one-wordpress-site-at-a-time-how-we-built-a-successful-distributed-wordpress-firm-serving-nonprofits,
+// .wcb-session-making-the-leap-successful-products-as-a-web-agency,
+// .wcb-session-managing-a-remote-wordpress-team,
+// .wcb-session-project-management-or-how-to-herd-cats,
+// .wcb-session-whats-my-wordpress-sites-email-strategy {
 
-.wcb-session-changing-the-world-one-wordpress-site-at-a-time-how-we-built-a-successful-distributed-wordpress-firm-serving-nonprofits,
-.wcb-session-making-the-leap-successful-products-as-a-web-agency,
-.wcb-session-managing-a-remote-wordpress-team,
-.wcb-session-project-management-or-how-to-herd-cats,
-.wcb-session-whats-my-wordpress-sites-email-strategy {
+//   @include session-label('Running a WordPress agency', #e32d88);
 
-  @include session-label('Running a WordPress agency', #e32d88);
-
-}
+// }

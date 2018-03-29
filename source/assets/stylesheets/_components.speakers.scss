@@ -11,32 +11,101 @@
 
 .wcorg-speakers {
 
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+
+}
+
+.wcorg-speaker:nth-child(3n) {
+
+  margin-right: 0px;
 
 }
 
 .wcorg-speaker {
 
-  border-top: 1px solid $color-border-weak;
-  padding: $unit-default 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+
+}
+
+
+.wcorg-speaker {
+
+  padding: 0;
+  border: 1px solid $color-border-weak;
+  float: left;
+  border-radius: 3px;
+  margin-bottom: 32px;
+  flex: 0 31%;
+  margin-right: 3.5%;
 
   .wcorg-speaker-description {
 
-    @include clearfix();
+   @include clearfix();
 
   }
 
+  h2 {
+
+    margin: 0;
+    padding: 16px;
+    font-size: ms(0);
+    line-height: ms(1);
+    margin-top:10px;
+
+    a {
+
+      display: inline-block;
+
+      &:hover,
+      &:focus,
+      &:active {
+
+      }
+
+    }
+
+    &:before {
+
+      content: "";
+      background:url('https://2018.europe.wordcamp.org/files/2018/03/wceu-stripes-horizontal.png') no-repeat right top;
+      width: 33%;
+      height: 24px;
+      display:block;
+      margin-left: -16px;
+      margin-top: -42px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 999;
+
+    }
+
+  }
+
+  .wcorg-speaker-description p {
+
+    @include visually-hidden();
+
+  }
 
   .avatar {
 
     float: left;
-    margin: $unit-xs $unit-s $unit-xs 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
   }
+
 
   p {
 
     margin-bottom: $unit-xs;
-
     font-size: ms(0, 16px);
 
     &:last-child {

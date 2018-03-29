@@ -55,8 +55,10 @@ $site-hero-path-pattern:        url('https://2018.europe.wordcamp.org/files/2017
 $site-hero-path-small:          url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-mobile.jpg'); // Background image
 $site-hero-path-large:          url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-desktop.jpg'); // Background image
 $site-hero-path-wide:           url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-desktop-wide.jpg'); // Background image
+$site-hero-path-wide-temp:      url('https://2018.europe.wordcamp.org/files/2018/03/wceu-header-wide.jpg'); // Background image
 $site-hero-background:          $color-brand-quaternary; // Hero color background
 $site-hero-overlay:             0; // Image overlay color opacity
+
 
 /* Media queries */
 $extra-small-value:             24em; // 384px

@@ -13,10 +13,6 @@
 
   position: relative;
 
-  // background: $site-hero-background $site-hero-path-pattern repeat 50% 50%;
-  // background-size: 300px 300px;
-  // background-attachment: fixed;
-
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-image: $site-hero-path-small;
@@ -47,7 +43,6 @@
     right: 0;
 
     background-color: rgba($site-hero-background, $site-hero-overlay);
-    // background-color: $color-brand-primary;
 
     content: "";
 
@@ -61,3 +56,49 @@
   }
 
 }
+
+// .custom-header {
+
+//   background-repeat: no-repeat;
+//   background-position: 50% 0;
+//   background-image: $site-hero-path-wide-temp;
+//   background-color: $site-hero-background;
+
+//   @include breakpoint(medium) {
+
+//     background-size: cover;
+//     background-image: $site-hero-path-wide-temp;
+//     background-position: 50% 100%;
+
+//   }
+
+//   @media (min-width: 1800px) {
+
+//     background-image: $site-hero-path-wide-temp;
+
+//   }
+
+// }
+
+// .wp-custom-header {
+
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+
+//   img {
+
+//     max-width: none;
+
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     height: 100%;
+//     min-width: 100vw;
+
+//   }
+
+// }

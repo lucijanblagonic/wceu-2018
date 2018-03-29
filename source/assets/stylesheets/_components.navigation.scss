@@ -126,6 +126,10 @@
 
   // }
 
+  // background-color: $color-brand-tertiary;
+  background-color: $color-brand-quaternary;
+  background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,.3));
+
   @include breakpoint(to-small) {
 
     background-color: $color-brand-quaternary;
@@ -266,7 +270,8 @@
 
         vertical-align: middle;
 
-        border-top-color: $color-brand-primary;
+        border-top-color: $color-brand-tertiary;
+        // border-top-color: $color-brand-primary;
 
         content: "";
 
