@@ -1,0 +1,69 @@
+/* =Speaker
+===================================================== */
+
+// Speaker
+//
+// Speakers detail
+//
+// Markup: speaker.html
+//
+// Style guide: 6.speaker
+
+.wcb_speaker .entry-title{
+    width: 66%;
+    margin-left: 33%;
+    font-size: 1.3em;
+}
+
+.speaker-avatar {
+    width: 31%;
+    float: left;
+    margin-right: 2%;
+    box-shadow: -8px 10px 0px 0px rgba(244,223,39,1);
+}
+.wcb_speaker .avatar{
+    margin-bottom: 0;
+}
+
+.wcb_speaker p{
+    display: table;
+    margin-left: 2%;
+}
+
+.wcb_speaker .speaker-sessions {
+    width: 66%;
+    margin-left: 33%;
+    text-transform: uppercase;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+}
+
+.wcb_speaker #speaker-session-names {
+    display: block;
+    width: 66%;
+    margin-left: 33%;
+}
+
+.wcb_speaker #speaker-session-names a {
+    text-decoration: none;
+}
+
+.wcb_speaker #speaker-session-names a:hover {
+    text-decoration: underline;
+}
+
+.wcb_speaker #speaker-session-names li {
+    padding-left: 0;
+    font-size: 0.8em;
+    font-weight: $bold;
+}
+
+.wcb_speaker footer:before {
+    content:"";
+    display: block;
+    background: url('https://2018.europe.wordcamp.org/files/2017/12/divider.png') no-repeat 50% 50%;
+    height: 24px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
