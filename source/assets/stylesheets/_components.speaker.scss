@@ -9,10 +9,21 @@
 //
 // Style guide: 6.speaker
 
+
+.wcb_speaker {
+    height: 500px;
+}
+
 .wcb_speaker .entry-title{
     width: 66%;
     margin-left: 33%;
     font-size: 1.3em;
+}
+
+.wcb_speaker .entry-content {
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .speaker-avatar {
