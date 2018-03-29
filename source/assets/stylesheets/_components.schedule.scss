@@ -25,6 +25,12 @@
 
   }
 
+  @include breakpoint(large) {
+
+    border-right: none;
+
+  }
+
 }
 
 .schedule-wide,
