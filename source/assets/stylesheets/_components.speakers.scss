@@ -17,20 +17,14 @@
 
 }
 
-.wcorg-speaker:nth-child(3n) {
-
-  margin-right: 0px;
-
-}
 
 .wcorg-speaker {
 
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
-
+    
 }
-
 
 .wcorg-speaker {
 
@@ -39,8 +33,26 @@
   float: left;
   border-radius: 3px;
   margin-bottom: 32px;
-  flex: 0 31%;
-  margin-right: 3.5%;
+  flex: 0 49%;
+  margin-right: 2%;
+    
+    &:nth-child(2n) {
+      margin-right: 0px;
+    }
+    
+    @include breakpoint(small) {
+
+      flex: 0 31%;
+      margin-right: 3.5%;
+      &:nth-child(2n) {
+        margin-right: 3.5%;
+      }
+      &:nth-child(3n) {
+           margin-right: 0px; 
+        }
+      
+
+    }
 
   .wcorg-speaker-description {
 
@@ -59,6 +71,8 @@
     a {
 
       display: inline-block;
+      word-break: break-all;
+      hyphens: auto;
 
       &:hover,
       &:focus,
