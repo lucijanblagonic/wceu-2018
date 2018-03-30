@@ -11,6 +11,11 @@
 
 .wcb_session {
 
+  margin-bottom: $unit-m;
+  padding-bottom: rem(64);
+
+  background: $image-divider no-repeat 50% 100%;
+
   .entry-title {
 
     margin-bottom: $unit-xs;
@@ -36,15 +41,6 @@
   .session-categories-links {
 
     @include visually-hidden();
-
-  }
-
-  .entry-footer {
-
-    padding-top: rem(64);
-    margin-top: $unit-m;
-
-    background: $image-divider no-repeat 50% 50%;
 
   }
 

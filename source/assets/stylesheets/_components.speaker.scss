@@ -11,6 +11,11 @@
 
 .wcb_speaker {
 
+  margin-bottom: $unit-m;
+  padding-bottom: rem(64);
+
+  background: $image-divider no-repeat 50% 100%;
+
   .entry-title {
 
     margin-bottom: $unit-xs;
@@ -22,6 +27,18 @@
     @include breakpoint(small) {
 
       padding-left: rem(120);
+
+    }
+
+    p {
+
+      margin-bottom: $unit-xs;
+
+      &:last-child {
+
+        margin-bottom: 0;
+
+      }
 
     }
 
@@ -63,15 +80,6 @@
   #speaker-session-names {
 
     @include list-reset();
-
-  }
-
-  .entry-footer {
-
-    padding-top: rem(64);
-    margin-top: $unit-m;
-
-    background: $image-divider no-repeat 50% 50%;
 
   }
 
