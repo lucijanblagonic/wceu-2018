@@ -64,11 +64,13 @@
 
   h2 {
 
+    position: relative;
     margin: 0;
-    padding: 16px;
+    padding: $unit-s;
+    margin-top:rem(8);
+
     font-size: ms(0);
     line-height: ms(1);
-    margin-top:10px;
 
     a {
 
@@ -82,16 +84,28 @@
 
     &:before {
 
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+
+      background: $image-stripe-horizontal no-repeat right top;
+
+      min-width: rem(48);
+      width: 30%;
+      height: rem(24);
+
       content: "";
-      background:url('https://2018.europe.wordcamp.org/files/2018/03/wceu-stripes-horizontal.png') no-repeat right top;
-      width: 33%;
-      height: 24px;
-      display:block;
-      margin-left: -16px;
-      margin-top: -42px;
-      margin-bottom: 15px;
-      position: relative;
-      z-index: 999;
+      @include transition-fast();
+
+    }
+
+    &:hover {
+
+      &:before {
+
+        width: 40%;
+
+      }
 
     }
 
@@ -136,42 +150,5 @@
 
   ul {}
   li {}
-
-}
-
-/*
- * Speaker page
- */
-
-.single-wcb_speaker {
-
-  .entry-content {
-
-    font-size: ms(0, 18px);
-
-  }
-
-}
-
-#session-speaker-names,
-#speaker-session-names {
-
-  @include list-reset();
-
-  margin-bottom: $unit-default;
-
-  li {
-
-    padding-left: rem(32);
-
-    // background-image: $image-bullet-dark;
-    // background-repeat: no-repeat;
-    // background-size: 12px;
-    // background-position: $unit-xs $unit-xs;
-
-    font-size: ms(0);
-    line-height: ms(2);
-
-  }
 
 }

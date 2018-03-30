@@ -9,113 +9,70 @@
 //
 // Style guide: 6.speaker
 
+.wcb_speaker {
 
+  .entry-title {
 
+    margin-bottom: $unit-xs;
 
-.wcb_speaker .entry-title{
-    
-    font-size: $unit-l;
-    
+  }
+
+  .entry-content {
+
     @include breakpoint(small) {
-        
-      width: 66%;
-      margin-left: 33%; 
-        
+
+      padding-left: rem(120);
+
     }
-}
 
-.wcb_speaker .entry-content {
-    
-    position: relative;
-    top: 0;
-    left: 0;
-    
-}
+  }
 
-.wcb_speaker .speaker-avatar {
-    
-    max-width: 320px;
-    margin-right: 2%;
-    margin-bottom: 25px;
-    box-shadow: -8px 10px 0px 0px rgba(244,223,39,1);
-    
+  .speaker-avatar {
+
+    float: left;
+    width: rem(100);
+    margin: rem(8) rem(16) rem(8) 0;
+
+    img {
+
+      margin: 0;
+
+    }
+
     @include breakpoint(small) {
-        
-      width: 31%;
-      float: left;
-      margin-bottom: 0px;
-        
+
+      margin-right: 0;
+      margin-left: 0 - rem(120);
+
+      box-shadow: -8px 10px 0px 0px rgba(244,223,39,1);
+
     }
-}
 
-.wcb_speaker .speaker-avatar img {
-    
-    margin-bottom: 0px;
-    width: 100%;
-    max-width: none;
-}
+  }
 
-.wcb_speaker p{
-    
-    display: table;
-    margin-left: 2%;
-    
-}
+  .speaker-sessions {
 
-.wcb_speaker .speaker-sessions {
-    
+    margin-top: $unit-m;
+
+    font-size: ms(0);
+    letter-spacing: .05em;
     text-transform: uppercase;
-    font-size: $unit-m;
-    letter-spacing: 1px;
-    
-    @include breakpoint(small) {
-        
-      width: 66%;
-      margin-left: 33%;
-        
-    }
-}
 
-.wcb_speaker #speaker-session-names {
-    
-    display: block;
-    
-    @include breakpoint(small) {
-    
-      width: 66%;
-      margin-left: 33%;
-        
-    }
-}
+  }
 
-.wcb_speaker #speaker-session-names a {
-    
-    text-decoration: none;
-    
-}
+  #speaker-session-names {
 
-.wcb_speaker #speaker-session-names a:hover {
-    
-    text-decoration: underline;
-    
-}
+    @include list-reset();
 
-.wcb_speaker #speaker-session-names li {
-    
-    padding-left: 0;
-    font-size: $unit-s;
-    font-weight: $bold;
-    
-}
+  }
 
-.wcb_speaker footer:before {
-    
-    content:"";
-    display: block;
-    background: url('https://2018.europe.wordcamp.org/files/2017/12/divider.png') no-repeat 50% 50%;
-    height: 24px;
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
+  .entry-footer {
+
+    padding-top: rem(64);
+    margin-top: $unit-m;
+
+    background: $image-divider no-repeat 50% 50%;
+
+  }
+
 }
