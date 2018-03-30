@@ -12,16 +12,11 @@
 .wcorg-speakers {
 
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:row;
+  flex-wrap: wrap;
+  flex-direction: row;
 
 }
 
-.wcorg-speaker:nth-child(3n) {
-
-  margin-right: 0px;
-
-}
 
 .wcorg-speaker {
 
@@ -31,34 +26,53 @@
 
 }
 
-
 .wcorg-speaker {
 
   padding: 0;
   border: 1px solid $color-border-weak;
-  float: left;
-  border-radius: 3px;
-  margin-bottom: 32px;
-  flex: 0 31%;
-  margin-right: 3.5%;
+  margin-bottom: $unit-default;
 
-  .wcorg-speaker-description {
+  border-radius: $border-radius-small;
 
-   @include clearfix();
+  @include breakpoint(to-small) {
+
+    width: 48%;
+    margin-left: 4%;
+
+    &:nth-child(2n+1) {
+
+      margin-left: 0;
+
+    }
 
   }
 
+  @include breakpoint(small) {
+
+    width: 32%;
+    margin-left: 2%;
+
+    &:nth-child(3n+1) {
+
+      margin-left: 0;
+
+    }
+
+  }
+
+  .wcorg-speaker-description {}
+
   h2 {
 
+    position: relative;
     margin: 0;
-    padding: 16px;
+    padding: $unit-s;
+    margin-top:rem(8);
+
     font-size: ms(0);
     line-height: ms(1);
-    margin-top:10px;
 
     a {
-
-      display: inline-block;
 
       &:hover,
       &:focus,
@@ -70,16 +84,28 @@
 
     &:before {
 
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+
+      background: $image-stripe-horizontal no-repeat right top;
+
+      min-width: rem(48);
+      width: 30%;
+      height: rem(24);
+
       content: "";
-      background:url('https://2018.europe.wordcamp.org/files/2018/03/wceu-stripes-horizontal.png') no-repeat right top;
-      width: 33%;
-      height: 24px;
-      display:block;
-      margin-left: -16px;
-      margin-top: -42px;
-      margin-bottom: 15px;
-      position: relative;
-      z-index: 999;
+      @include transition-fast();
+
+    }
+
+    &:hover {
+
+      &:before {
+
+        width: 40%;
+
+      }
 
     }
 
@@ -124,42 +150,5 @@
 
   ul {}
   li {}
-
-}
-
-/*
- * Speaker page
- */
-
-.single-wcb_speaker {
-
-  .entry-content {
-
-    font-size: ms(0, 18px);
-
-  }
-
-}
-
-#session-speaker-names,
-#speaker-session-names {
-
-  @include list-reset();
-
-  margin-bottom: $unit-default;
-
-  li {
-
-    padding-left: rem(32);
-
-    // background-image: $image-bullet-dark;
-    // background-repeat: no-repeat;
-    // background-size: 12px;
-    // background-position: $unit-xs $unit-xs;
-
-    font-size: ms(0);
-    line-height: ms(2);
-
-  }
 
 }
