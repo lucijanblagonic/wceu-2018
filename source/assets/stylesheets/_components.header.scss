@@ -13,40 +13,42 @@
 
   position: relative;
 
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-image: $site-hero-path-small;
   background-color: $site-hero-background;
 
-  @include breakpoint(medium) {
+  // background-repeat: repeat-x;
+  // background-position: 50% 0;
+  // background-image: $site-hero-path-small;
+  // background-color: $site-hero-background;
 
-    background-size: cover;
-    background-image: $site-hero-path-large;
-    background-position: 50% 100%;
+  // @include breakpoint(medium) {
 
-  }
+  //   background-size: cover;
+  //   background-image: $site-hero-path-large;
+  //   background-position: 50% 100%;
 
-  @media (min-width: 1800px) {
+  // }
 
-    background-image: $site-hero-path-wide;
+  // @media (min-width: 1800px) {
 
-  }
+  //   background-image: $site-hero-path-wide;
 
-  @include transition-fast();
+  // }
 
-  &:before {
+  // @include transition-fast();
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  // &:before {
 
-    background-color: rgba($site-hero-background, $site-hero-overlay);
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
 
-    content: "";
+  //   background-color: rgba($site-hero-background, $site-hero-overlay);
 
-  }
+  //   content: "";
+
+  // }
 
   > * {
 
@@ -57,7 +59,38 @@
 
 }
 
-// .custom-header {
+.custom-header {
+
+  background: $site-hero-background $site-hero-path-small repeat-x 50% 100%;
+  background-size: cover;
+
+  // Add gradient
+  &:before {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+
+    background-image: linear-gradient(to top, rgba($site-hero-background, .5), rgba(0,0,0,0));
+
+    content: "";
+
+    // Hide on homepage
+    .home & {
+
+      display: none;
+
+    }
+
+  }
+
+  @include breakpoint(large) {
+
+    background-image: $site-hero-path-large;
+
+  }
 
 //   background-repeat: no-repeat;
 //   background-position: 50% 0;
@@ -78,7 +111,7 @@
 
 //   }
 
-// }
+}
 
 // .wp-custom-header {
 

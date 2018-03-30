@@ -52,12 +52,17 @@ $site-logo-path:                url('https://2018.europe.wordcamp.org/files/2017
 
 /* Hero */
 $site-hero-path-pattern:        url('https://2018.europe.wordcamp.org/files/2017/10/pattern-01.png'); // Background patterns
-$site-hero-path-small:          url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-mobile.jpg'); // Background image
-$site-hero-path-large:          url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-desktop.jpg'); // Background image
-$site-hero-path-wide:           url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-desktop-wide.jpg'); // Background image
-$site-hero-path-wide-temp:      url('https://2018.europe.wordcamp.org/files/2018/03/wceu-header-wide.jpg'); // Background image
+$site-hero-path-small:          url('https://2018.europe.wordcamp.org/files/2018/03/futuristic-header-wceu18-hero-mobile.png'); // Background image
+$site-hero-path-large:          url('https://2018.europe.wordcamp.org/files/2018/03/futuristic-header-wceu18-hero-desktop.png'); // Background image
+$site-hero-path-wide:           url('https://2018.europe.wordcamp.org/files/2018/03/futuristic-header-wceu18-hero-desktop.png'); // Background image
 $site-hero-background:          $color-brand-quaternary; // Hero color background
 $site-hero-overlay:             0; // Image overlay color opacity
+
+// Old header, for reference only
+// $site-hero-path-small:          url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-mobile.jpg'); // Background image
+// $site-hero-path-large:          url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-desktop.jpg'); // Background image
+// $site-hero-path-wide:           url('https://2018.europe.wordcamp.org/files/2017/11/header-wceu18-hero-desktop-wide.jpg'); // Background image
+// $site-hero-path-wide-temp:      url('https://2018.europe.wordcamp.org/files/2018/03/wceu-header-wide.jpg'); // Background image
 
 
 /* Media queries */
