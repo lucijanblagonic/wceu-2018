@@ -16,11 +16,26 @@
 
 .wcorg-session {
 
-  margin-bottom: $unit-l;
-
   h2 {
 
     margin-bottom: 0;
+
+  }
+
+  &:before {
+
+    display: block;
+    height: rem(80);
+
+    background: $image-divider no-repeat 50% 50%;
+
+    content: "";
+
+  }
+
+  &:first-child:before {
+
+    display: none;
 
   }
 
