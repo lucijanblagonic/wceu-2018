@@ -225,6 +225,7 @@
 
     .wcpt-session-title {
 
+      display: block;
       margin-bottom: 0;
 
       font-size: ms(1);
@@ -233,32 +234,62 @@
 
     }
 
+    .wcpt-session-title:before {
+
+      display: inline-block;
+      margin-right: $unit-xs;
+
+      width: rem(32);
+      height: rem(24);
+      background: $image-icons  no-repeat 0 0;
+
+      vertical-align: middle;
+      content: "";
+
+    }
+
   }
 
-  // .global-session {
+  .wcpt-session-type-custom {}
 
-  //   &.registration,
-  //   &.lunch,
-  //   &.break,
-  //   &.morning-break,
-  //   &.afternoon-break {
+  .wcpt-session-type-custom.wcb-session-opening-remarks .wcpt-session-title:before,
+  .wcpt-session-type-custom.wcb-session-closing-remarks .wcpt-session-title:before {
 
-  //     color: $color-text-strong;
-  //     background-color: $color-grey-10;
+    background-position: 0 0;
 
-  //     .wcpt-session-title {
+  }
 
-  //       margin-bottom: 0;
+  .wcpt-session-type-custom.wcb-session-registration-opens .wcpt-session-title:before {
 
-  //       font-size: ms(1);
-  //       line-height: ms(1);
-  //       text-transform: uppercase;
+    background-position: 0 -24px;
 
-  //     }
+  }
 
-  //   }
+  .wcpt-session-type-custom.wcb-session-open-networking .wcpt-session-title:before,
+  .wcpt-session-type-custom.wcb-session-open-networking-2 .wcpt-session-title:before {
 
-  // }
+    background-position: 0 -48px;
+
+  }
+
+  .wcpt-session-type-custom.wcb-session-lunch .wcpt-session-title:before,
+  .wcpt-session-type-custom.wcb-session-lunch-2 .wcpt-session-title:before {
+
+    background-position: 0 -72px;
+
+  }
+
+  .wcpt-session-type-custom.wcb-session-registration-opens,
+  .wcpt-session-type-custom.wcb-session-open-networking,
+  .wcpt-session-type-custom.wcb-session-open-networking-2,
+  .wcpt-session-type-custom.wcb-session-opening-remarks,
+  .wcpt-session-type-custom.wcb-session-closing-remarks,
+  .wcpt-session-type-custom.wcb-session-lunch {
+
+
+
+  }
+
 
   .wcpt-session-speakers {
 
@@ -267,6 +298,14 @@
     a {
 
       color: $color-text;
+
+      &:hover,
+      &:focus,
+      &:active {
+
+        color: $color-link-alt-hover;
+
+      }
 
     }
 
