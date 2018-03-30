@@ -12,8 +12,8 @@
 .wcorg-speakers {
 
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:row;
+  flex-wrap: wrap;
+  flex-direction: row;
 
 }
 
@@ -23,42 +23,44 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
-    
+
 }
 
 .wcorg-speaker {
 
   padding: 0;
   border: 1px solid $color-border-weak;
-  float: left;
-  border-radius: 3px;
-  margin-bottom: 32px;
-  flex: 0 49%;
-  margin-right: 2%;
-    
-    &:nth-child(2n) {
-      margin-right: 0px;
-    }
-    
-    @include breakpoint(small) {
+  margin-bottom: $unit-default;
 
-      flex: 0 31%;
-      margin-right: 3.5%;
-      &:nth-child(2n) {
-        margin-right: 3.5%;
-      }
-      &:nth-child(3n) {
-           margin-right: 0px; 
-        }
-      
+  border-radius: $border-radius-small;
+
+  @include breakpoint(to-small) {
+
+    width: 48%;
+    margin-left: 4%;
+
+    &:nth-child(2n+1) {
+
+      margin-left: 0;
 
     }
-
-  .wcorg-speaker-description {
-
-   @include clearfix();
 
   }
+
+  @include breakpoint(small) {
+
+    width: 32%;
+    margin-left: 2%;
+
+    &:nth-child(3n+1) {
+
+      margin-left: 0;
+
+    }
+
+  }
+
+  .wcorg-speaker-description {}
 
   h2 {
 
@@ -69,10 +71,6 @@
     margin-top:10px;
 
     a {
-
-      display: inline-block;
-      word-break: break-all;
-      hyphens: auto;
 
       &:hover,
       &:focus,
