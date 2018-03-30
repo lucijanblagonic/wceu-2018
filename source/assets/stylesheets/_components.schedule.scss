@@ -208,7 +208,8 @@
 
   .wcpt-session-title {
 
-    display: block;
+    display: flex;
+    flex-flow: column;
     margin-bottom: $unit-xs;
 
     font-size: ms(1);
@@ -359,14 +360,6 @@
     .wcb-track-workshop-1:before,
     .wcb-track-workshop-2:before,
     .wcb-track-workshop-3:before {
-
-      // display: block;
-      // padding: $unit-xs $unit-s;
-      // margin-top: -($unit-xs);
-      // margin-left: -($unit-s);
-      // margin-right: -($unit-s);
-      // margin-bottom: $unit-xs;
-      // border: none;
 
       color: $color-text;
       background-color: $color-grey-10;
@@ -540,38 +533,40 @@ $session-type-color-business:    #575357; // Ash
 
   }
 
-  .wcpt-session-title:after {
+  .wcpt-session-title:before {
 
     display: inline-block;
-    margin-left: $unit-xs;
     padding: rem(1) rem(6);
+    margin-bottom: $unit-xs;
+    margin-right: $unit-xs;
+    align-self: flex-start;
 
     font-size: ms(-2);
     line-height: ms(1);
     text-transform: uppercase;
     font-weight: $bold;
     color: $color-text-strong;
-    // border-radius: $border-radius-small;
-    // background: $color-grey-10;
+    border-radius: $border-radius-small;
+    background: $color-brand-tertiary;
 
   }
 
 }
 
-.wcb-session-category-workshop-3h .wcpt-session-title:after {
+.wcb-session-category-workshop-3h .wcpt-session-title:before {
 
-  content: "3 hours";
-
-}
-.wcb-session-category-workshop-60min .wcpt-session-title:after {
-
-  content: "60 min";
+  content: "Workshop — 3 hours";
 
 }
+.wcb-session-category-workshop-60min .wcpt-session-title:before {
 
-.wcb-session-category-workshop-90min .wcpt-session-title:after {
+  content: "Workshop — 60 min";
 
-  content: "90 min";
+}
+
+.wcb-session-category-workshop-90min .wcpt-session-title:before {
+
+  content: "Workshop — 90 min";
 
 }
 
