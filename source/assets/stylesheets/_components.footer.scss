@@ -57,24 +57,24 @@
 
   transition: all .1s ease;
 
-  &:after {
+  // &:after {
 
-    position: absolute;
-    left: 50%;
-    top: rem(30);
-    z-index: -1;
+  //   position: absolute;
+  //   left: 50%;
+  //   top: rem(30);
+  //   z-index: -1;
 
-    margin-left: -(rem(15));
-    margin-bottom: -(rem(30));
-    width: rem(30);
-    height: rem(100);
+  //   margin-left: -(rem(15));
+  //   margin-bottom: -(rem(30));
+  //   width: rem(30);
+  //   height: rem(100);
 
-    background: $color-link;
-    transition: all .1s ease;
+  //   background: $color-link;
+  //   transition: all .1s ease;
 
-    content: "";
+  //   content: "";
 
-  }
+  // }
 
   &:hover,
   &:focus,
