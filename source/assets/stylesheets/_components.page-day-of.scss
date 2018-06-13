@@ -44,6 +44,12 @@
 
       border-top: none;
 
+      &:before {
+
+        display: none;
+
+      }
+
     }
 
     &:before {
