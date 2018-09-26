@@ -47,7 +47,7 @@ Feel free to modify everything in the `source` directory and keep in mind that `
 
 * Uses [Bourbon](bourbon.io), a lightweight Sass Tool Set
 * Uses [Modular scale](https://github.com/modularscale/modularscale-sass) for typography
-* Uses [Susy](susy.oddbird.net) for grids
+* Uses [Susy](http://oddbird.net/susy/) for grids
 * CSS architecture based on ITCSS (Inverted Triangle CSS) by [Harry Roberts](http://csswizardry.com) [Article](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
 
 ## Additional Resources
